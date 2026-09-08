@@ -1,0 +1,118 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Interpretation}
+
+The audited claim is best read as three empirical predictions plus one causal story, and the
+data separate them cleanly.
+
+\para{The two point predictions are wrong for instructively different reasons.} \cone is wrong
+because the rule is \emph{conservative}, not liberal: it sits roughly 20 \plddt units below the
+disorder-optimal operating point and captures only the 19--40\% of residues in the lowest
+confidence band. The framing appears to assume that ``very low confidence'' is a permissive
+filter; it is a strict one. \ctwo is wrong in a deeper way, because it is not a statement about
+AlphaFold at all. The same predictions, the same residues and the same threshold give
+specificity 0.98 or 0.67 depending on whether the benchmark counts X-ray-missing residues as
+negatives. A claim whose truth value flips on an annotation convention is under-specified, and
+the fix is simply to state the convention.
+
+\para{The comparative prediction is wrong in the opposite direction, and its origin is
+diagnosable.} Once thresholds are calibrated, \plddt is \emph{better} than the median dedicated
+predictor on short segments, on all four datasets, under both a strict and a generous
+definition, with zero significant exceptions among 174 comparisons. The claim is nonetheless
+recoverable at a shared 0.5 threshold, where it is not only true but quantitatively accurate.
+We think this is how the belief arises, and the lesson generalises: whenever a comparison mixes
+a method whose scores are physically anchored (\plddt is a predicted lDDT, so 0.5 means
+something specific about geometry) with methods whose scores are arbitrary monotone confidences,
+a shared cut compares operating points rather than methods.
+
+\para{The causal story is right, and more specific than usually stated.} Four independent tests
+support conflation: RSA of the same coordinates beats \plddt on every reference set; a stronger
+folding model does not improve \plddt but does improve RSA; inside the low-\plddt stratum \plddt
+is at chance while RSA is not; and \plddt adds at most $+0.007$ AUC on top of RSA while RSA adds
+up to $+0.065$ on top of \plddt. The error-stratum analysis sharpens ``conflation'' into a
+concrete failure mode: \plddt is high wherever AlphaFold commits to \emph{a} conformation,
+whether or not that conformation is real. Most missed disorder is confidently modelled and
+solvent-exposed --- extended pseudostructure --- which is why a geometric readout rescues it and
+why raising the confidence threshold only partially helps.
+
+\subsection{Comparison with prior work}
+
+Our AUCs reproduce the official CAID values to three decimals wherever coverage is complete
+(\secref{sec:validation}), so the study is anchored to the published assessment. Relative to
+\citet{kurgan2023}, who report AF2-\plddt at AUC 0.722 and AF2-RSA at 0.768 on CAID1, we find
+higher absolute AUCs on \caidtwo/\caidthree \dpdb (0.929--0.934 and 0.944--0.950) but the same
+ordering and a similar gap. The absolute difference is a reference-set effect: CAID1 differs
+from CAID2/3, and \dpdb's exclusion of X-ray-missing negatives raises all AUCs. Their
+protein-level finding that short-\idr proteins are harder is reproduced here at region level and
+shown to be a property of \emph{all} methods rather than a \plddt-specific weakness. We also
+confirm the CAID3 observation that \afthreeplddt does not improve on \afplddt, and add that the
+difference is not statistically distinguishable from zero.
+
+\subsection{Practical recommendations}
+
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=2pt]
+    \item \textbf{Do not use \plddtrule as a disorder detector if recall matters.} Use
+    \plddt $<$ 70 (the MCC-optimal region is 69--72), which raises recall on long regions from
+    $\approx$0.60 to 0.78--0.85 at specificity $\ge$ 0.95 on \dpdb.
+    \item \textbf{Prefer \afrsa to \afplddt.} It costs nothing extra, since the structure is
+    already computed, and it is significantly better on every reference set tested.
+    \item \textbf{State the negative-set convention} whenever reporting specificity or precision
+    for a disorder predictor. Reporting one convention silently determines the answer.
+    \item \textbf{Never compare disorder predictors at a shared score threshold.} This paper
+    contains a worked example of the false conclusion that follows.
+\end{itemize}
+
+\subsection{Limitations}
+
+\para{Methodological.} Our primary ``calibrated'' operating point maximises MCC on the full
+data, following CAID's own convention, and is therefore optimistically biased. We measured the
+optimism by $5\times2$-fold cross-validation over targets and found it small (median
+$0.20$--$0.66$\pp, max $3.0$\pp), but it is not zero and is slightly larger on the \dnox
+references where the class balance is less favourable. Balanced accuracy on a length stratum is
+a constructed quantity that the folk claim does not define; we report two definitions that
+bracket the reasonable range and agree, but a third could disagree. Our $p$-values are
+percentile-bootstrap rather than exact, which can be slightly anti-conservative for small
+effects; the \cfour conclusion rests on effects of the wrong \emph{sign}, so this is not
+load-bearing there, but it matters for the marginal AlphaFold3 comparisons, which we report as
+null rather than as equivalence. We apply no multiple-comparison correction across the 174 \cfour
+comparisons; correction would only strengthen the ``0 better'' conclusion and weaken the ``97
+worse'' one, so we report both counts and lean on the former.
+
+\para{Data and scope.} CAID1 is no longer retrievable, so \citet{kurgan2023} cannot be
+reproduced exactly on their own data; CAID2 and CAID3 v3 supersede it. The ground truth is
+\disprot-derived and inherits \disprot's biases: curation is literature-driven and long,
+well-characterised \idrs are over-represented relative to short ones (1,610--1,808 residues in
+$<$20 aa regions versus 16,502--19,703 in $>$30 aa regions), so short-region estimates are
+correspondingly noisier, as the wider CIs in \tabref{tab:strata} show. Coverage matching costs
+18--36\% of targets because the intersection is set by the worst-covered panel member; the
+clause tests are therefore also reported on \plddt's own coverage and on the full reference,
+with unchanged conclusions. Absence of annotation is not annotation of order --- \dnox assumes it
+is, \dpdb refuses to --- and neither is a gold standard, which is exactly why both are reported.
+Our re-parsed \afdb coordinates differ from the CAID-era models at $r = 0.992$ (median 1.14
+\plddt units), which affects only the descriptive error-stratum statistics, not the benchmark
+results; likewise the structural analysis uses Shrake--Rupley rather than DSSP accessibility,
+while the benchmark comparisons use the official DSSP-based \afrsa submissions. Finally, the
+2-feature logistic probe is linear, so ``\plddt adds $\le 0.007$ on top of RSA'' is a statement
+about linearly accessible information, not an information-theoretic bound. We did not test
+predicted aligned error, MSA depth, or per-domain analyses.
+
+\para{What could invalidate these results.} A ground truth in which short disordered regions are
+systematically better represented could change the \cfour magnitudes, though we doubt it would
+change the sign given the size and consistency of the effect. A demonstration that CAID's
+\afplddt submission used a non-standard AlphaFold configuration would undercut the mapping to
+the folk rule; we checked this as far as the data allow ($r = 0.992$ against \afdb) and found no
+evidence of it. And if a reader's operational definition of ``disordered'' is ``not resolved in
+a crystal'', then \dnox is the wrong reference for them and the specificity story changes ---
+which is itself the paper's central methodological point.
+
+\subsection{Broader implications}
+
+Two lessons travel beyond disorder prediction. First, a benchmark that publishes more than one
+convention for what counts as a negative is publishing more than one question, and a claim
+stated without naming the convention has no truth value. Second, a folk rule inherited from a
+model's internal diagnostic is unlikely to be calibrated for a downstream task it was never
+trained on: \plddt targets lDDT-C$\alpha$, not disorder, and the 50 boundary comes from
+AlphaFold's own confidence banding, not from any disorder annotation. Both failure modes are
+easy to reproduce in other settings where a model's uncertainty output gets repurposed as a
+semantic label.

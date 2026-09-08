@@ -1,0 +1,54 @@
+{
+  "CAID2 Disorder-PDB": {
+    "plddt_local_bacc_short": 0.7711467318288907,
+    "plddt_local_recall_short": 0.6527950310559006,
+    "plddt_local_specificity_short": 0.8894984326018809,
+    "n_dedicated": 35,
+    "delta_median_pp": -11.17615097847212,
+    "delta_max_pp": -2.6245873161598587,
+    "best_method": "PredIDR-short",
+    "n_significantly_better": 0,
+    "n_significantly_worse": 34,
+    "n_in_10_15pp_band": 0,
+    "n_above_10pp": 0
+  },
+  "CAID2 Disorder-NOX": {
+    "plddt_local_bacc_short": 0.7248681578468813,
+    "plddt_local_recall_short": 0.806146572104019,
+    "plddt_local_specificity_short": 0.6435897435897436,
+    "n_dedicated": 35,
+    "delta_median_pp": -10.698358029071494,
+    "delta_max_pp": -1.0850938674446926,
+    "best_method": "SETH-0",
+    "n_significantly_better": 0,
+    "n_significantly_worse": 31,
+    "n_in_10_15pp_band": 0,
+    "n_above_10pp": 0
+  },
+  "CAID3 Disorder-PDB": {
+    "plddt_local_bacc_short": 0.7407855316069916,
+    "plddt_local_recall_short": 0.6277654867256637,
+    "plddt_local_specificity_short": 0.8538055764883196,
+    "n_dedicated": 52,
+    "delta_median_pp": -8.270179505489727,
+    "delta_max_pp": -0.8233778178853561,
+    "best_method": "PredIDR-short",
+    "n_significantly_better": 0,
+    "n_significantly_worse": 47,
+    "n_in_10_15pp_band": 0,
+    "n_above_10pp": 0
+  },
+  "CAID3 Disorder-NOX": {
+    "plddt_local_bacc_short": 0.6662596110357304,
+    "plddt_local_recall_short": 0.5870646766169154,
+    "plddt_local_specificity_short": 0.7454545454545455,
+    "n_dedicated": 52,
+    "delta_median_pp": -4.722488361720073,
+    "delta_max_pp": 2.393176553556798,
+    "best_method": "SETH-1",
+    "n_significantly_better": 0,
+    "n_significantly_worse": 21,
+    "n_in_10_15pp_band": 0,
+    "n_above_10pp": 0
+  }
+}

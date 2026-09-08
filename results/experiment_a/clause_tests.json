@@ -1,0 +1,166 @@
+{
+  "CAID2 Disorder-PDB": {
+    "n_targets": 240,
+    "positive_fraction": 0.2938933747544898,
+    "C1_all_residues": {
+      "sensitivity": 0.5758277277889403,
+      "ci": [
+        0.5212297258046367,
+        0.6257103716615061
+      ],
+      "p_one_sided_ge_0.80": 0.0
+    },
+    "C1_long_regions_gt30": {
+      "sensitivity": 0.5980815104298838,
+      "ci": [
+        0.5370583258863478,
+        0.6541059108384759
+      ],
+      "p_one_sided_ge_0.80": 0.0,
+      "n_positive_residues": 19703
+    },
+    "C1_short_regions_lt20": {
+      "sensitivity": 0.39254658385093166,
+      "ci": [
+        0.324106539493754,
+        0.45671377641965877
+      ],
+      "n_positive_residues": 1610
+    },
+    "C2_specificity": {
+      "specificity": 0.988201072629761,
+      "ci": [
+        0.9836629506891299,
+        0.9922385385449163
+      ],
+      "p_one_sided_le_0.70": 0.0
+    },
+    "cutoff_for_sens_0.80_all": 75.0,
+    "specificity_at_that_cutoff": 0.9361512589764567,
+    "cutoff_for_sens_0.80_long": 73.0,
+    "specificity_at_that_cutoff_long": 0.9435142259794564
+  },
+  "CAID2 Disorder-NOX": {
+    "n_targets": 135,
+    "positive_fraction": 0.271027496382055,
+    "C1_all_residues": {
+      "sensitivity": 0.5745941905168731,
+      "ci": [
+        0.5154638755772122,
+        0.6396159363790638
+      ],
+      "p_one_sided_ge_0.80": 0.0
+    },
+    "C1_long_regions_gt30": {
+      "sensitivity": 0.5827387020047571,
+      "ci": [
+        0.5214030962949037,
+        0.6508460415673569
+      ],
+      "p_one_sided_ge_0.80": 0.0,
+      "n_positive_residues": 17658
+    },
+    "C1_short_regions_lt20": {
+      "sensitivity": 0.4326241134751773,
+      "ci": [
+        0.2844854635056717,
+        0.5697216235632183
+      ],
+      "n_positive_residues": 423
+    },
+    "C2_specificity": {
+      "specificity": 0.7124394504883665,
+      "ci": [
+        0.6655838592699835,
+        0.7615191187224732
+      ],
+      "p_one_sided_le_0.70": 0.302
+    },
+    "cutoff_for_sens_0.80_all": 75.0,
+    "specificity_at_that_cutoff": 0.5952711824029222,
+    "cutoff_for_sens_0.80_long": 74.0,
+    "specificity_at_that_cutoff_long": 0.6005320416104185
+  },
+  "CAID3 Disorder-PDB": {
+    "n_targets": 261,
+    "positive_fraction": 0.3124492140435428,
+    "C1_all_residues": {
+      "sensitivity": 0.550712940543449,
+      "ci": [
+        0.4974297763395894,
+        0.5964484998855425
+      ],
+      "p_one_sided_ge_0.80": 0.0
+    },
+    "C1_long_regions_gt30": {
+      "sensitivity": 0.5833069536773241,
+      "ci": [
+        0.5245489530749813,
+        0.6367181176231377
+      ],
+      "p_one_sided_ge_0.80": 0.0,
+      "n_positive_residues": 18954
+    },
+    "C1_short_regions_lt20": {
+      "sensitivity": 0.3313053097345133,
+      "ci": [
+        0.26475122862099704,
+        0.39727788442737494
+      ],
+      "n_positive_residues": 1808
+    },
+    "C2_specificity": {
+      "specificity": 0.9872238976281685,
+      "ci": [
+        0.9794788850052529,
+        0.992257268295175
+      ],
+      "p_one_sided_le_0.70": 0.0
+    },
+    "cutoff_for_sens_0.80_all": 74.0,
+    "specificity_at_that_cutoff": 0.94371994457576,
+    "cutoff_for_sens_0.80_long": 70.0,
+    "specificity_at_that_cutoff_long": 0.9559458798598093
+  },
+  "CAID3 Disorder-NOX": {
+    "n_targets": 161,
+    "positive_fraction": 0.30384739624951124,
+    "C1_all_residues": {
+      "sensitivity": 0.5880147717099373,
+      "ci": [
+        0.5368165963303793,
+        0.6363021572033329
+      ],
+      "p_one_sided_ge_0.80": 0.0
+    },
+    "C1_long_regions_gt30": {
+      "sensitivity": 0.6078051145315719,
+      "ci": [
+        0.5542109272126988,
+        0.660165930626375
+      ],
+      "p_one_sided_ge_0.80": 0.0,
+      "n_positive_residues": 16502
+    },
+    "C1_short_regions_lt20": {
+      "sensitivity": 0.2504145936981758,
+      "ci": [
+        0.15801057383865985,
+        0.3519933604025626
+      ],
+      "n_positive_residues": 603
+    },
+    "C2_specificity": {
+      "specificity": 0.8352992893252252,
+      "ci": [
+        0.7973898967754716,
+        0.8721233183370506
+      ],
+      "p_one_sided_le_0.70": 0.0
+    },
+    "cutoff_for_sens_0.80_all": 68.0,
+    "specificity_at_that_cutoff": 0.7641097027865289,
+    "cutoff_for_sens_0.80_long": 66.0,
+    "specificity_at_that_cutoff_long": 0.7709233887708501
+  }
+}

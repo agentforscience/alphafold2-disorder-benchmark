@@ -1,0 +1,408 @@
+{
+  "reference_versions": {
+    "caid2_disorder_pdb": {
+      "n": 348,
+      "pos": 37072,
+      "neg": 93805,
+      "und": 156143,
+      "official_version": "CAID2"
+    },
+    "caid2_disorder_nox": {
+      "n": 210,
+      "pos": 31315,
+      "neg": 129487,
+      "und": 0,
+      "official_version": "CAID2"
+    },
+    "caid3_disorder_pdb": {
+      "n": 319,
+      "pos": 31401,
+      "neg": 67838,
+      "und": 61183,
+      "official_version": "CAID3_v3"
+    },
+    "caid3_disorder_nox": {
+      "n": 204,
+      "pos": 26367,
+      "neg": 73610,
+      "und": 541,
+      "official_version": "CAID3_v3"
+    }
+  },
+  "auc_checks": [
+    {
+      "round": "caid2",
+      "reference": "disorder_pdb",
+      "method": "AlphaFold-disorder",
+      "ours": 0.9287,
+      "official_group": "AlphaFold-disorder",
+      "official_group_auc": 0.947,
+      "n_targets": 299,
+      "coverage": 0.859
+    },
+    {
+      "round": "caid2",
+      "reference": "disorder_pdb",
+      "method": "AlphaFold-rsa",
+      "ours": 0.9443,
+      "official_group": "AlphaFold-disorder",
+      "official_group_auc": 0.947,
+      "n_targets": 299,
+      "coverage": 0.859
+    },
+    {
+      "round": "caid2",
+      "reference": "disorder_pdb",
+      "method": "IUPred3",
+      "ours": 0.8854,
+      "official_group": "IUPred3",
+      "official_group_auc": 0.885,
+      "n_targets": 348,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid2",
+      "reference": "disorder_pdb",
+      "method": "ESpritz-D",
+      "ours": 0.8989,
+      "official_group": "ESpritz",
+      "official_group_auc": 0.899,
+      "n_targets": 348,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid2",
+      "reference": "disorder_pdb",
+      "method": "MobiDB-lite",
+      "ours": 0.868,
+      "official_group": "MobiDB-lite",
+      "official_group_auc": 0.868,
+      "n_targets": 348,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid2",
+      "reference": "disorder_pdb",
+      "method": "flDPnn",
+      "ours": 0.8833,
+      "official_group": "flDPnn",
+      "official_group_auc": 0.994,
+      "n_targets": 348,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid2",
+      "reference": "disorder_pdb",
+      "method": "SETH-1",
+      "ours": 0.9115,
+      "official_group": "SETH-1",
+      "official_group_auc": 0.911,
+      "n_targets": 348,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid2",
+      "reference": "disorder_pdb",
+      "method": "VSL2",
+      "ours": 0.8872,
+      "official_group": "VSL2",
+      "official_group_auc": 0.887,
+      "n_targets": 348,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid2",
+      "reference": "disorder_nox",
+      "method": "AlphaFold-disorder",
+      "ours": 0.6949,
+      "official_group": "AlphaFold-disorder",
+      "official_group_auc": 0.758,
+      "n_targets": 173,
+      "coverage": 0.824
+    },
+    {
+      "round": "caid2",
+      "reference": "disorder_nox",
+      "method": "AlphaFold-rsa",
+      "ours": 0.7468,
+      "official_group": "AlphaFold-disorder",
+      "official_group_auc": 0.758,
+      "n_targets": 173,
+      "coverage": 0.824
+    },
+    {
+      "round": "caid2",
+      "reference": "disorder_nox",
+      "method": "IUPred3",
+      "ours": 0.7553,
+      "official_group": "IUPred3",
+      "official_group_auc": 0.755,
+      "n_targets": 210,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid2",
+      "reference": "disorder_nox",
+      "method": "ESpritz-D",
+      "ours": 0.8016,
+      "official_group": "ESpritz",
+      "official_group_auc": 0.802,
+      "n_targets": 210,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid2",
+      "reference": "disorder_nox",
+      "method": "MobiDB-lite",
+      "ours": 0.7476,
+      "official_group": "MobiDB-lite",
+      "official_group_auc": 0.748,
+      "n_targets": 210,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid2",
+      "reference": "disorder_nox",
+      "method": "flDPnn",
+      "ours": 0.8334,
+      "official_group": "flDPnn",
+      "official_group_auc": 0.984,
+      "n_targets": 210,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid2",
+      "reference": "disorder_nox",
+      "method": "SETH-1",
+      "ours": 0.7788,
+      "official_group": "SETH-1",
+      "official_group_auc": 0.779,
+      "n_targets": 210,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid2",
+      "reference": "disorder_nox",
+      "method": "VSL2",
+      "ours": 0.7437,
+      "official_group": "VSL2",
+      "official_group_auc": 0.744,
+      "n_targets": 210,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_pdb",
+      "method": "AlphaFold-pLDDT",
+      "ours": 0.9342,
+      "official_group": "AlphaFold-disorder",
+      "official_group_auc": 0.95,
+      "n_targets": 319,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_pdb",
+      "method": "AlphaFold-rsa",
+      "ours": 0.9498,
+      "official_group": "AlphaFold-disorder",
+      "official_group_auc": 0.95,
+      "n_targets": 319,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_pdb",
+      "method": "IUPred3",
+      "ours": 0.8822,
+      "official_group": "IUPred3",
+      "official_group_auc": 0.882,
+      "n_targets": 317,
+      "coverage": 0.994
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_pdb",
+      "method": "ESpritz-D",
+      "ours": 0.8738,
+      "official_group": "ESpritz",
+      "official_group_auc": 0.874,
+      "n_targets": 319,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_pdb",
+      "method": "MobiDB-lite",
+      "ours": 0.8658,
+      "official_group": "MobiDB-lite",
+      "official_group_auc": 0.866,
+      "n_targets": 319,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_pdb",
+      "method": "flDPnn",
+      "ours": 0.8609,
+      "official_group": "flDPnn",
+      "official_group_auc": 0.861,
+      "n_targets": 318,
+      "coverage": 0.997
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_pdb",
+      "method": "SETH-1",
+      "ours": 0.9094,
+      "official_group": "SETH-1",
+      "official_group_auc": 0.909,
+      "n_targets": 319,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_pdb",
+      "method": "VSL2",
+      "ours": 0.8905,
+      "official_group": "VSL2",
+      "official_group_auc": 0.89,
+      "n_targets": 318,
+      "coverage": 0.997
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_nox",
+      "method": "AlphaFold-pLDDT",
+      "ours": 0.7776,
+      "official_group": "AlphaFold-disorder",
+      "official_group_auc": 0.836,
+      "n_targets": 204,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_nox",
+      "method": "AlphaFold-rsa",
+      "ours": 0.8357,
+      "official_group": "AlphaFold-disorder",
+      "official_group_auc": 0.836,
+      "n_targets": 204,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_nox",
+      "method": "IUPred3",
+      "ours": 0.8097,
+      "official_group": "IUPred3",
+      "official_group_auc": 0.81,
+      "n_targets": 202,
+      "coverage": 0.99
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_nox",
+      "method": "ESpritz-D",
+      "ours": 0.8134,
+      "official_group": "ESpritz",
+      "official_group_auc": 0.813,
+      "n_targets": 204,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_nox",
+      "method": "MobiDB-lite",
+      "ours": 0.7875,
+      "official_group": "MobiDB-lite",
+      "official_group_auc": 0.788,
+      "n_targets": 204,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_nox",
+      "method": "flDPnn",
+      "ours": 0.801,
+      "official_group": "flDPnn",
+      "official_group_auc": 0.801,
+      "n_targets": 203,
+      "coverage": 0.995
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_nox",
+      "method": "SETH-1",
+      "ours": 0.8222,
+      "official_group": "SETH-1",
+      "official_group_auc": 0.822,
+      "n_targets": 204,
+      "coverage": 1.0
+    },
+    {
+      "round": "caid3",
+      "reference": "disorder_nox",
+      "method": "VSL2",
+      "ours": 0.7841,
+      "official_group": "VSL2",
+      "official_group_auc": 0.784,
+      "n_targets": 203,
+      "coverage": 0.995
+    }
+  ],
+  "sweep_checks": [
+    {
+      "threshold": 0.1,
+      "ours_tpr": 0.921,
+      "official_tpr": 0.928,
+      "ours_tnr": 0.687,
+      "official_tnr": 0.672,
+      "ours_bac": 0.804,
+      "official_bac": 0.8,
+      "ours_mcc": 0.557,
+      "official_mcc": 0.555
+    },
+    {
+      "threshold": 0.3,
+      "ours_tpr": 0.78,
+      "official_tpr": 0.787,
+      "ours_tnr": 0.948,
+      "official_tnr": 0.947,
+      "ours_bac": 0.864,
+      "official_bac": 0.867,
+      "ours_mcc": 0.751,
+      "official_mcc": 0.756
+    },
+    {
+      "threshold": 0.5,
+      "ours_tpr": 0.61,
+      "official_tpr": 0.621,
+      "ours_tnr": 0.986,
+      "official_tnr": 0.986,
+      "ours_bac": 0.798,
+      "official_bac": 0.804,
+      "ours_mcc": 0.692,
+      "official_mcc": 0.7
+    },
+    {
+      "threshold": 0.7,
+      "ours_tpr": 0.102,
+      "official_tpr": 0.12,
+      "ours_tnr": 0.998,
+      "official_tnr": 0.999,
+      "ours_bac": 0.55,
+      "official_bac": 0.559,
+      "ours_mcc": 0.263,
+      "official_mcc": 0.286
+    }
+  ],
+  "plddt_roundtrip": {
+    "n_targets": 567,
+    "median_per_target_r": 0.995478967947276,
+    "min_per_target_r": 0.7690229442597775,
+    "pooled_r": 0.9924672085646761,
+    "median_mean_abs_delta": 0.01140702422708273,
+    "n_residues": 323327
+  }
+}

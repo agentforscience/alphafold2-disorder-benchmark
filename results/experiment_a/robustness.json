@@ -1,0 +1,550 @@
+{
+  "CAID2 Disorder-PDB": [
+    {
+      "target_set": "panel_intersection",
+      "n_targets": 240,
+      "n_positive_residues": 22894,
+      "n_negative_residues": 55005,
+      "positive_fraction": 0.2938933747544898,
+      "sensitivity": 0.5758277277889403,
+      "sensitivity_ci": [
+        0.5212297258046367,
+        0.6257103716615061
+      ],
+      "specificity": 0.988201072629761,
+      "specificity_ci": [
+        0.9836629506891299,
+        0.9922385385449163
+      ],
+      "balanced_accuracy": 0.7820144002093506,
+      "mcc": 0.6723625567684239,
+      "P_sens_ge_0.80": 0.0,
+      "P_spec_le_0.70": 0.0,
+      "sens_short_lt20": 0.39254658385093166,
+      "sens_short_lt20_ci": [
+        0.324106539493754,
+        0.45671377641965877
+      ],
+      "n_pos_short_lt20": 1610,
+      "P_sens_short_lt20_ge_0.80": 0.0,
+      "sens_mid_20_30": 0.48513598987982287,
+      "sens_mid_20_30_ci": [
+        0.37905982415631506,
+        0.5743398044623853
+      ],
+      "n_pos_mid_20_30": 1581,
+      "P_sens_mid_20_30_ge_0.80": 0.0,
+      "sens_long_gt30": 0.5980815104298838,
+      "sens_long_gt30_ci": [
+        0.5370583258863478,
+        0.6541059108384759
+      ],
+      "n_pos_long_gt30": 19703,
+      "P_sens_long_gt30_ge_0.80": 0.0,
+      "sensitivity_per_target_mean": 0.5002563072643038,
+      "specificity_per_target_mean": 0.9726416739470268,
+      "auc": 0.9322715997695923
+    },
+    {
+      "target_set": "plddt_own_coverage",
+      "n_targets": 299,
+      "n_positive_residues": 31066,
+      "n_negative_residues": 72679,
+      "positive_fraction": 0.2994457564219962,
+      "sensitivity": 0.6100238202536535,
+      "sensitivity_ci": [
+        0.5544358972627141,
+        0.660798327156367
+      ],
+      "specificity": 0.9857592977338708,
+      "specificity_ci": [
+        0.98090617475826,
+        0.9896714270439837
+      ],
+      "balanced_accuracy": 0.7978915589937622,
+      "mcc": 0.6919212204412841,
+      "P_sens_ge_0.80": 0.0,
+      "P_spec_le_0.70": 0.0,
+      "sens_short_lt20": 0.4164511122607346,
+      "sens_short_lt20_ci": [
+        0.35030674436562365,
+        0.4845660540173843
+      ],
+      "n_pos_short_lt20": 1933,
+      "P_sens_short_lt20_ge_0.80": 0.0,
+      "sens_mid_20_30": 0.4784102060843965,
+      "sens_mid_20_30_ci": [
+        0.4001871273218753,
+        0.5581580923340236
+      ],
+      "n_pos_mid_20_30": 2038,
+      "P_sens_mid_20_30_ge_0.80": 0.0,
+      "sens_long_gt30": 0.6337331610998339,
+      "sens_long_gt30_ci": [
+        0.573405364720646,
+        0.6870204688699018
+      ],
+      "n_pos_long_gt30": 27095,
+      "P_sens_long_gt30_ge_0.80": 0.0,
+      "sensitivity_per_target_mean": 0.5058352499841391,
+      "specificity_per_target_mean": 0.9726722015430389,
+      "auc": 0.9287156462669373
+    },
+    {
+      "target_set": "all_targets_missing_as_ordered",
+      "n_targets": 348,
+      "n_positive_residues": 37072,
+      "n_negative_residues": 93805,
+      "positive_fraction": 0.2832583265203206,
+      "sensitivity": 0.5111944324557618,
+      "sensitivity_ci": [
+        0.44731118201185976,
+        0.5732237117959657
+      ],
+      "specificity": 0.9889664730025052,
+      "specificity_ci": [
+        0.9851824386112233,
+        0.9922582096537611
+      ],
+      "balanced_accuracy": 0.7500804527291335,
+      "mcc": 0.626519587308999,
+      "P_sens_ge_0.80": 0.0,
+      "P_spec_le_0.70": 0.0,
+      "sens_short_lt20": 0.3655767484105359,
+      "sens_short_lt20_ci": [
+        0.30283241347113143,
+        0.44119060462919224
+      ],
+      "n_pos_short_lt20": 2202,
+      "P_sens_short_lt20_ge_0.80": 0.0,
+      "sens_mid_20_30": 0.4198966408268734,
+      "sens_mid_20_30_ci": [
+        0.34015285683855695,
+        0.49746612466124657
+      ],
+      "n_pos_mid_20_30": 2322,
+      "P_sens_mid_20_30_ge_0.80": 0.0,
+      "sens_long_gt30": 0.5275592970382205,
+      "sens_long_gt30_ci": [
+        0.45563392126989655,
+        0.5987959938857852
+      ],
+      "n_pos_long_gt30": 32548,
+      "P_sens_long_gt30_ge_0.80": 0.0,
+      "sensitivity_per_target_mean": 0.434611321107062,
+      "specificity_per_target_mean": 0.9751274334356566,
+      "auc": 0.8099515438079834
+    }
+  ],
+  "CAID2 Disorder-NOX": [
+    {
+      "target_set": "panel_intersection",
+      "n_targets": 135,
+      "n_positive_residues": 18728,
+      "n_negative_residues": 50372,
+      "positive_fraction": 0.271027496382055,
+      "sensitivity": 0.5745941905168731,
+      "sensitivity_ci": [
+        0.5154638755772122,
+        0.6396159363790638
+      ],
+      "specificity": 0.7124394504883665,
+      "specificity_ci": [
+        0.6655838592699835,
+        0.7615191187224732
+      ],
+      "balanced_accuracy": 0.6435168205026198,
+      "mcc": 0.26495505069337094,
+      "P_sens_ge_0.80": 0.0,
+      "P_spec_le_0.70": 0.302,
+      "sens_short_lt20": 0.4326241134751773,
+      "sens_short_lt20_ci": [
+        0.2844854635056717,
+        0.5697216235632183
+      ],
+      "n_pos_short_lt20": 423,
+      "P_sens_short_lt20_ge_0.80": 0.0,
+      "sens_mid_20_30": 0.44513137557959814,
+      "sens_mid_20_30_ci": [
+        0.3066214689579948,
+        0.5671328094734528
+      ],
+      "n_pos_mid_20_30": 647,
+      "P_sens_mid_20_30_ge_0.80": 0.0,
+      "sens_long_gt30": 0.5827387020047571,
+      "sens_long_gt30_ci": [
+        0.5214030962949037,
+        0.6508460415673569
+      ],
+      "n_pos_long_gt30": 17658,
+      "P_sens_long_gt30_ge_0.80": 0.0,
+      "sensitivity_per_target_mean": 0.5065076879225104,
+      "specificity_per_target_mean": 0.7566325235845862,
+      "auc": 0.7146506905555725
+    },
+    {
+      "target_set": "plddt_own_coverage",
+      "n_targets": 173,
+      "n_positive_residues": 25820,
+      "n_negative_residues": 83913,
+      "positive_fraction": 0.23529840613124584,
+      "sensitivity": 0.6195197521301317,
+      "sensitivity_ci": [
+        0.5534919517397174,
+        0.67995234869433
+      ],
+      "specificity": 0.6725060479305948,
+      "specificity_ci": [
+        0.6179985262826584,
+        0.727094778515481
+      ],
+      "balanced_accuracy": 0.6460129000303632,
+      "mcc": 0.25326289924180967,
+      "P_sens_ge_0.80": 0.0,
+      "P_spec_le_0.70": 0.815,
+      "sens_short_lt20": 0.42940038684719534,
+      "sens_short_lt20_ci": [
+        0.30590235081374323,
+        0.5552530580181797
+      ],
+      "n_pos_short_lt20": 517,
+      "P_sens_short_lt20_ge_0.80": 0.0,
+      "sens_mid_20_30": 0.43162901307966706,
+      "sens_mid_20_30_ci": [
+        0.3002130874923333,
+        0.5491969656125217
+      ],
+      "n_pos_mid_20_30": 841,
+      "P_sens_mid_20_30_ge_0.80": 0.0,
+      "sens_long_gt30": 0.6299975472160902,
+      "sens_long_gt30_ci": [
+        0.5618327117948803,
+        0.6930861770873259
+      ],
+      "n_pos_long_gt30": 24462,
+      "P_sens_long_gt30_ge_0.80": 0.0,
+      "sensitivity_per_target_mean": 0.5179165673067838,
+      "specificity_per_target_mean": 0.7471777824865733,
+      "auc": 0.6948853135108948
+    },
+    {
+      "target_set": "all_targets_missing_as_ordered",
+      "n_targets": 210,
+      "n_positive_residues": 31315,
+      "n_negative_residues": 129487,
+      "positive_fraction": 0.19474260270394647,
+      "sensitivity": 0.5108095162062909,
+      "sensitivity_ci": [
+        0.43739598520311607,
+        0.5770753379034019
+      ],
+      "specificity": 0.7877702008695854,
+      "specificity_ci": [
+        0.7322932790431751,
+        0.8389791479919138
+      ],
+      "balanced_accuracy": 0.6492898585379381,
+      "mcc": 0.2662101000673615,
+      "P_sens_ge_0.80": 0.0,
+      "P_spec_le_0.70": 0.0,
+      "sens_short_lt20": 0.3323353293413174,
+      "sens_short_lt20_ci": [
+        0.20765825899401097,
+        0.4683706320231378
+      ],
+      "n_pos_short_lt20": 668,
+      "P_sens_short_lt20_ge_0.80": 0.0,
+      "sens_mid_20_30": 0.35276967930029157,
+      "sens_mid_20_30_ci": [
+        0.23564800323209972,
+        0.4729469513895343
+      ],
+      "n_pos_mid_20_30": 1029,
+      "P_sens_mid_20_30_ge_0.80": 0.0,
+      "sens_long_gt30": 0.5203254777500169,
+      "sens_long_gt30_ci": [
+        0.44500412417806057,
+        0.5889243705695676
+      ],
+      "n_pos_long_gt30": 29618,
+      "P_sens_long_gt30_ge_0.80": 0.0,
+      "sensitivity_per_target_mean": 0.42666460068606465,
+      "specificity_per_target_mean": 0.78908201743355,
+      "auc": 0.6923739314079285
+    }
+  ],
+  "CAID3 Disorder-PDB": [
+    {
+      "target_set": "panel_intersection",
+      "n_targets": 261,
+      "n_positive_residues": 22302,
+      "n_negative_residues": 49076,
+      "positive_fraction": 0.3124492140435428,
+      "sensitivity": 0.550712940543449,
+      "sensitivity_ci": [
+        0.4974297763395894,
+        0.5964484998855425
+      ],
+      "specificity": 0.9872238976281685,
+      "specificity_ci": [
+        0.9794788850052529,
+        0.992257268295175
+      ],
+      "balanced_accuracy": 0.7689684190858088,
+      "mcc": 0.6477816436884799,
+      "P_sens_ge_0.80": 0.0,
+      "P_spec_le_0.70": 0.0,
+      "sens_short_lt20": 0.3313053097345133,
+      "sens_short_lt20_ci": [
+        0.26475122862099704,
+        0.39727788442737494
+      ],
+      "n_pos_short_lt20": 1808,
+      "P_sens_short_lt20_ge_0.80": 0.0,
+      "sens_mid_20_30": 0.40714285714285714,
+      "sens_mid_20_30_ci": [
+        0.31551474637217536,
+        0.49186763886841284
+      ],
+      "n_pos_mid_20_30": 1540,
+      "P_sens_mid_20_30_ge_0.80": 0.0,
+      "sens_long_gt30": 0.5833069536773241,
+      "sens_long_gt30_ci": [
+        0.5245489530749813,
+        0.6367181176231377
+      ],
+      "n_pos_long_gt30": 18954,
+      "P_sens_long_gt30_ge_0.80": 0.0,
+      "sensitivity_per_target_mean": 0.44626728391918524,
+      "specificity_per_target_mean": 0.9776845536037149,
+      "auc": 0.9430447816848755
+    },
+    {
+      "target_set": "plddt_own_coverage",
+      "n_targets": 319,
+      "n_positive_residues": 31401,
+      "n_negative_residues": 67838,
+      "positive_fraction": 0.3164179405274136,
+      "sensitivity": 0.5994713544154645,
+      "sensitivity_ci": [
+        0.5397870682492815,
+        0.6552746526524554
+      ],
+      "specificity": 0.9797753471505646,
+      "specificity_ci": [
+        0.9662189402269873,
+        0.9891715786998675
+      ],
+      "balanced_accuracy": 0.7896233507830146,
+      "mcc": 0.6691252799635639,
+      "P_sens_ge_0.80": 0.0,
+      "P_spec_le_0.70": 0.0,
+      "sens_short_lt20": 0.34903438530381536,
+      "sens_short_lt20_ci": [
+        0.28487802608826407,
+        0.4109479959645106
+      ],
+      "n_pos_short_lt20": 2123,
+      "P_sens_short_lt20_ge_0.80": 0.0,
+      "sens_mid_20_30": 0.44485683987274655,
+      "sens_mid_20_30_ci": [
+        0.36221335331752275,
+        0.5309532453841266
+      ],
+      "n_pos_mid_20_30": 1886,
+      "P_sens_mid_20_30_ge_0.80": 0.0,
+      "sens_long_gt30": 0.6295268691588785,
+      "sens_long_gt30_ci": [
+        0.5639112453857751,
+        0.690545785324439
+      ],
+      "n_pos_long_gt30": 27392,
+      "P_sens_long_gt30_ge_0.80": 0.0,
+      "sensitivity_per_target_mean": 0.4714616906916749,
+      "specificity_per_target_mean": 0.9744347047168193,
+      "auc": 0.9341514110565186
+    },
+    {
+      "target_set": "all_targets_missing_as_ordered",
+      "n_targets": 319,
+      "n_positive_residues": 31401,
+      "n_negative_residues": 67838,
+      "positive_fraction": 0.3164179405274136,
+      "sensitivity": 0.5994713544154645,
+      "sensitivity_ci": [
+        0.5397870682492815,
+        0.6552746526524554
+      ],
+      "specificity": 0.9797753471505646,
+      "specificity_ci": [
+        0.9662189402269873,
+        0.9891715786998675
+      ],
+      "balanced_accuracy": 0.7896233507830146,
+      "mcc": 0.6691252799635639,
+      "P_sens_ge_0.80": 0.0,
+      "P_spec_le_0.70": 0.0,
+      "sens_short_lt20": 0.34903438530381536,
+      "sens_short_lt20_ci": [
+        0.28487802608826407,
+        0.4109479959645106
+      ],
+      "n_pos_short_lt20": 2123,
+      "P_sens_short_lt20_ge_0.80": 0.0,
+      "sens_mid_20_30": 0.44485683987274655,
+      "sens_mid_20_30_ci": [
+        0.36221335331752275,
+        0.5309532453841266
+      ],
+      "n_pos_mid_20_30": 1886,
+      "P_sens_mid_20_30_ge_0.80": 0.0,
+      "sens_long_gt30": 0.6295268691588785,
+      "sens_long_gt30_ci": [
+        0.5639112453857751,
+        0.690545785324439
+      ],
+      "n_pos_long_gt30": 27392,
+      "P_sens_long_gt30_ge_0.80": 0.0,
+      "sensitivity_per_target_mean": 0.4714616906916749,
+      "specificity_per_target_mean": 0.9744347047168193,
+      "auc": 0.9341514110565186
+    }
+  ],
+  "CAID3 Disorder-NOX": [
+    {
+      "target_set": "panel_intersection",
+      "n_targets": 161,
+      "n_positive_residues": 17872,
+      "n_negative_residues": 40947,
+      "positive_fraction": 0.30384739624951124,
+      "sensitivity": 0.5880147717099373,
+      "sensitivity_ci": [
+        0.5368165963303793,
+        0.6363021572033329
+      ],
+      "specificity": 0.8352992893252252,
+      "specificity_ci": [
+        0.7973898967754716,
+        0.8721233183370506
+      ],
+      "balanced_accuracy": 0.7116570305175813,
+      "mcc": 0.42762086611474354,
+      "P_sens_ge_0.80": 0.0,
+      "P_spec_le_0.70": 0.0,
+      "sens_short_lt20": 0.2504145936981758,
+      "sens_short_lt20_ci": [
+        0.15801057383865985,
+        0.3519933604025626
+      ],
+      "n_pos_short_lt20": 603,
+      "P_sens_short_lt20_ge_0.80": 0.0,
+      "sens_mid_20_30": 0.4276401564537158,
+      "sens_mid_20_30_ci": [
+        0.3057487712065959,
+        0.557952592736874
+      ],
+      "n_pos_mid_20_30": 767,
+      "P_sens_mid_20_30_ge_0.80": 0.0,
+      "sens_long_gt30": 0.6078051145315719,
+      "sens_long_gt30_ci": [
+        0.5542109272126988,
+        0.660165930626375
+      ],
+      "n_pos_long_gt30": 16502,
+      "P_sens_long_gt30_ge_0.80": 0.0,
+      "sensitivity_per_target_mean": 0.48085224043453756,
+      "specificity_per_target_mean": 0.8662009212652195,
+      "auc": 0.83292156457901
+    },
+    {
+      "target_set": "plddt_own_coverage",
+      "n_targets": 204,
+      "n_positive_residues": 26367,
+      "n_negative_residues": 73610,
+      "positive_fraction": 0.2637306580513518,
+      "sensitivity": 0.6289301020214663,
+      "sensitivity_ci": [
+        0.5650053070952744,
+        0.6927221809405534
+      ],
+      "specificity": 0.7614590408911832,
+      "specificity_ci": [
+        0.6958687617990245,
+        0.8250800312429959
+      ],
+      "balanced_accuracy": 0.6951945714563248,
+      "mcc": 0.362763514322639,
+      "P_sens_ge_0.80": 0.0,
+      "P_spec_le_0.70": 0.032,
+      "sens_short_lt20": 0.2644110275689223,
+      "sens_short_lt20_ci": [
+        0.17892374714679932,
+        0.35511002045440354
+      ],
+      "n_pos_short_lt20": 798,
+      "P_sens_short_lt20_ge_0.80": 0.0,
+      "sens_mid_20_30": 0.44545454545454544,
+      "sens_mid_20_30_ci": [
+        0.3248904518859704,
+        0.5660720348122477
+      ],
+      "n_pos_mid_20_30": 990,
+      "P_sens_mid_20_30_ge_0.80": 0.0,
+      "sens_long_gt30": 0.6481549290044347,
+      "sens_long_gt30_ci": [
+        0.5803783189369764,
+        0.7114539152917061
+      ],
+      "n_pos_long_gt30": 24579,
+      "P_sens_long_gt30_ge_0.80": 0.0,
+      "sensitivity_per_target_mean": 0.48936570344599284,
+      "specificity_per_target_mean": 0.8401630532841899,
+      "auc": 0.7776448130607605
+    },
+    {
+      "target_set": "all_targets_missing_as_ordered",
+      "n_targets": 204,
+      "n_positive_residues": 26367,
+      "n_negative_residues": 73610,
+      "positive_fraction": 0.2637306580513518,
+      "sensitivity": 0.6289301020214663,
+      "sensitivity_ci": [
+        0.5650053070952744,
+        0.6927221809405534
+      ],
+      "specificity": 0.7614590408911832,
+      "specificity_ci": [
+        0.6958687617990245,
+        0.8250800312429959
+      ],
+      "balanced_accuracy": 0.6951945714563248,
+      "mcc": 0.362763514322639,
+      "P_sens_ge_0.80": 0.0,
+      "P_spec_le_0.70": 0.032,
+      "sens_short_lt20": 0.2644110275689223,
+      "sens_short_lt20_ci": [
+        0.17892374714679932,
+        0.35511002045440354
+      ],
+      "n_pos_short_lt20": 798,
+      "P_sens_short_lt20_ge_0.80": 0.0,
+      "sens_mid_20_30": 0.44545454545454544,
+      "sens_mid_20_30_ci": [
+        0.3248904518859704,
+        0.5660720348122477
+      ],
+      "n_pos_mid_20_30": 990,
+      "P_sens_mid_20_30_ge_0.80": 0.0,
+      "sens_long_gt30": 0.6481549290044347,
+      "sens_long_gt30_ci": [
+        0.5803783189369764,
+        0.7114539152917061
+      ],
+      "n_pos_long_gt30": 24579,
+      "P_sens_long_gt30_ge_0.80": 0.0,
+      "sensitivity_per_target_mean": 0.48936570344599284,
+      "specificity_per_target_mean": 0.8401630532841899,
+      "auc": 0.7776448130607605
+    }
+  ]
+}

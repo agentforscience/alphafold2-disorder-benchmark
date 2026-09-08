@@ -1,0 +1,116 @@
+{
+  "C3_calibration": {
+    "CAID2 Disorder-PDB": {
+      "frac_residues_plddt_lt50": 0.1926454286953588,
+      "P_disordered_given_plddt_lt50": 0.9482137496247374,
+      "P_disordered_given_plddt_ge50": 0.1446411728888836,
+      "prevalence": 0.2994457564219962,
+      "frac_of_all_disorder_in_plddt_lt50": 0.6100238202536535
+    },
+    "CAID2 Disorder-NOX": {
+      "frac_residues_plddt_lt50": 0.396207157372896,
+      "P_disordered_given_plddt_lt50": 0.3679186696414196,
+      "P_disordered_given_plddt_ge50": 0.14827336392175802,
+      "prevalence": 0.23529840613124584,
+      "frac_of_all_disorder_in_plddt_lt50": 0.6195197521301317
+    },
+    "CAID3 Disorder-PDB": {
+      "frac_residues_plddt_lt50": 0.2035087012162557,
+      "P_disordered_given_plddt_lt50": 0.9320657555951674,
+      "P_disordered_given_plddt_ge50": 0.15911592424376605,
+      "prevalence": 0.3164179405274136,
+      "frac_of_all_disorder_in_plddt_lt50": 0.5994713544154645
+    },
+    "CAID3 Disorder-NOX": {
+      "frac_residues_plddt_lt50": 0.341498544665273,
+      "P_disordered_given_plddt_lt50": 0.4857067541444555,
+      "P_disordered_given_plddt_ge50": 0.14861395914027492,
+      "prevalence": 0.2637306580513518,
+      "frac_of_all_disorder_in_plddt_lt50": 0.6289301020214663
+    }
+  },
+  "C4_probe_auc": {
+    "CAID2 Disorder-PDB": {
+      "pLDDT only": 0.926335905016763,
+      "RSA only": 0.943964006879701,
+      "pLDDT + RSA": 0.9490203951101154
+    },
+    "CAID2 Disorder-NOX": {
+      "pLDDT only": 0.6888422667171155,
+      "RSA only": 0.7405194718058613,
+      "pLDDT + RSA": 0.7430547741974987
+    },
+    "CAID3 Disorder-PDB": {
+      "pLDDT only": 0.9314428837761535,
+      "RSA only": 0.9488391115328293,
+      "pLDDT + RSA": 0.955534947354085
+    },
+    "CAID3 Disorder-NOX": {
+      "pLDDT only": 0.7613465838732818,
+      "RSA only": 0.8267392080768196,
+      "pLDDT + RSA": 0.8217958945493482
+    }
+  },
+  "C5_error_strata": {
+    "CAID2 Disorder-PDB": {
+      "FN_mean_plddt": 73.50054931640625,
+      "TP_mean_plddt": 37.08292770385742,
+      "FN_frac_plddt_gt70": 0.5635788262370541,
+      "FN_frac_plddt_gt90": 0.20809359416954354,
+      "FN_mean_rsa": 0.46307173371315,
+      "TP_mean_rsa": 0.6456393003463745,
+      "TN_mean_rsa": 0.2521195709705353,
+      "FN_frac_buried": 0.23177982355197546,
+      "TN_frac_buried": 0.5704256812815113,
+      "FP_mean_rsa": 0.5942108631134033,
+      "FP_frac_exposed": 0.6397435897435897,
+      "FN_median_region_length": 125.0,
+      "TP_median_region_length": 214.0
+    },
+    "CAID2 Disorder-NOX": {
+      "FN_mean_plddt": 73.08197784423828,
+      "TP_mean_plddt": 37.21805191040039,
+      "FN_frac_plddt_gt70": 0.551501375762651,
+      "FN_frac_plddt_gt90": 0.20385213542289748,
+      "FN_mean_rsa": 0.473582923412323,
+      "TP_mean_rsa": 0.6460427045822144,
+      "TN_mean_rsa": 0.31158843636512756,
+      "FN_frac_buried": 0.21784902500299078,
+      "TN_frac_buried": 0.4642776972838398,
+      "FP_mean_rsa": 0.6481228470802307,
+      "FP_frac_exposed": 0.7548671761280932,
+      "FN_median_region_length": 161.0,
+      "TP_median_region_length": 239.0
+    },
+    "CAID3 Disorder-PDB": {
+      "FN_mean_plddt": 71.41903686523438,
+      "TP_mean_plddt": 37.02251052856445,
+      "FN_frac_plddt_gt70": 0.5034420586789051,
+      "FN_frac_plddt_gt90": 0.14923782986395673,
+      "FN_mean_rsa": 0.4918619692325592,
+      "TP_mean_rsa": 0.6376765370368958,
+      "TN_mean_rsa": 0.25548484921455383,
+      "FN_frac_buried": 0.19193574823799378,
+      "TN_frac_buried": 0.5612507956715468,
+      "FP_mean_rsa": 0.5468316674232483,
+      "FP_frac_exposed": 0.5744920993227991,
+      "FN_median_region_length": 110.0,
+      "TP_median_region_length": 170.0
+    },
+    "CAID3 Disorder-NOX": {
+      "FN_mean_plddt": 70.0584716796875,
+      "TP_mean_plddt": 36.77264404296875,
+      "FN_frac_plddt_gt70": 0.46872677073377933,
+      "FN_frac_plddt_gt90": 0.12063289795051503,
+      "FN_mean_rsa": 0.5124852061271667,
+      "TP_mean_rsa": 0.6364861130714417,
+      "TN_mean_rsa": 0.2910081446170807,
+      "FN_frac_buried": 0.1664011893384305,
+      "TN_frac_buried": 0.49954650395778366,
+      "FP_mean_rsa": 0.6204552054405212,
+      "FP_frac_exposed": 0.6992486433838876,
+      "FN_median_region_length": 146.0,
+      "TP_median_region_length": 205.0
+    }
+  }
+}

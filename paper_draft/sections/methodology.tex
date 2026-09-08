@@ -1,0 +1,131 @@
+\section{Methodology}
+\label{sec:method}
+
+\subsection{Problem statement and design}
+\label{sec:setup}
+
+We test an evaluation claim about a fixed operating point, so the right instrument is an
+existing blind benchmark rather than a new prediction run. Let $s_m(r) \in [0,1]$ be method
+$m$'s disorder score for residue $r$ and $y(r) \in \{0,1\}$ the experimental label. The rule
+under audit is the classifier $\hat{y}(r) = \mathbb{1}[\plddt(r) < 50]$, which under the CAID
+encoding $s_{\afplddt} = 1 - \plddt/100$~\citep{piovesan2022} is identically
+$\mathbb{1}[s(r) > 0.5]$. Nothing has to be re-predicted: the CAID archives contain both the
+ground truth and the official \afplddt submission. We downloaded AlphaFold2 coordinates
+separately only to characterise the errors structurally and to verify that the CAID scores
+really are $1 - \plddt/100$.
+
+Four design decisions each answer a specific way the result could have been an artefact.
+\emph{(i)} Specificity depends entirely on how negatives are defined, so both CAID references
+are reported for every result and neither is treated as ``the'' answer. \emph{(ii)} AlphaFold
+covers only 82--86\% of CAID2 targets while other methods cover $\approx$100\%, so every
+comparison runs on the intersection of targets covered by all panel methods; the \cone/\ctwo
+tests are additionally repeated on \plddt's own coverage and on the full reference with missing
+targets scored as all-ordered. \emph{(iii)} Comparing all methods at a shared 0.5 cut is
+meaningful only for \plddt, so every method is evaluated at three operating points.
+\emph{(iv)} Choosing a threshold on the data one then scores is optimistically biased, so the
+optimism is measured directly by repeated cross-validation and reported.
+
+\subsection{Data}
+
+We use the four CAID disorder reference sets (\tabref{tab:data}). The two conventions differ
+only in the definition of a negative: \dpdb counts as negative only residues observed in an
+experimental PDB structure, excluding X-ray-missing residues (hence the large excluded column);
+\dnox counts every non-annotated residue as negative. We identified which CAID release each
+downloaded reference corresponds to by exact matching on (\#sequences, positives, negatives,
+undefined) against the four official reference-set manifests; CAID3 turns out to be the v3
+round, so all official comparisons use the v3 files.
+
+\begin{table}[t]
+    \centering
+    \small
+    \begin{tabular}{@{}lrrrrl@{}}
+        \toprule
+        \textbf{Reference set} & \textbf{Targets} & \textbf{Positives} & \textbf{Negatives} &
+        \textbf{Excluded} & \textbf{Release} \\
+        \midrule
+        \caidtwo \dpdb   & 348 & 37,072 & 93,805 & 156,143 & CAID2 \\
+        \caidtwo \dnox   & 210 & 31,315 & 129,487 & 0 & CAID2 \\
+        \caidthree \dpdb & 319 & 31,401 & 67,838 & 61,183 & CAID3 v3 \\
+        \caidthree \dnox & 204 & 26,367 & 73,610 & 541 & CAID3 v3 \\
+        \bottomrule
+    \end{tabular}
+    \caption{The four evaluation references. Residue counts are as published by CAID. The
+    ``Excluded'' column holds residues with no evidence either way; \dpdb discards them, \dnox
+    treats almost all of them as ordered. This single convention difference drives the
+    specificity result in \secref{sec:c2}.}
+    \label{tab:data}
+\end{table}
+
+We additionally re-parsed 588 \afdb models (94\% of mappable CAID targets) into per-residue
+\plddt and Shrake--Rupley relative solvent accessibility for the structural error analysis.
+
+\subsection{Comparator panel and operating points}
+
+\para{Panel.} We restrict the panel to \emph{general} intrinsic-disorder predictors: 37 methods
+on \caidtwo and 56 on \caidthree. It spans classical
+predictors (IUPred3~\citep{erdos2021}, ESpritz-D~\citep{walsh2012},
+MobiDB-lite~\citep{necci2017,piovesan2025}, VSL2, RONN, DisEMBL), strong sequence-based methods
+(flDPnn~\citep{hu2021}, AIUPred, DISOPRED3~\citep{jones2015},
+SPOT-Disorder2~\citep{hanson2019}, Metapredict~\citep{emenecker2021}) and protein-language-model
+methods (PUNCH2, SETH~\citep{ilzhofer2022}, DisorderUnetLM, ESMDisPred, Dispredict3). Methods that predict a different target --- disordered
+\emph{binding} regions (ANCHOR2, MoRFchibi, DisoRDPbind, \dots) or linkers --- are excluded,
+because including them would flatter \plddt. Two entries (FoldUnfold, NeProc-disorder) submitted
+binary states with an empty score column and cannot be threshold-calibrated; they are excluded
+and the exclusion is logged. Excluding them is the conservative choice, since at their implicit
+0.5 cut they would have added two artificially weak comparators to the \cfour test. AlphaFold-derived
+entries (\afplddt, \afrsa, \afthreeplddt, \afthreersa) are tracked separately as the object of
+study and its mechanistic controls, leaving 35 and 52 \emph{dedicated} predictors respectively.
+
+\para{Three operating points.} Every method is scored at (a) the \textbf{literal} threshold
+$0.5$, which is the only point at which the folk rule is defined; (b) a \textbf{calibrated}
+threshold maximising MCC on the reference, which is our primary setting; and (c) a
+\textbf{content-matched} threshold reproducing the true number of disordered residues, following
+\citet{kurgan2023}. The literal comparison is reported precisely to show how misleading it is.
+
+\subsection{Metrics and statistics}
+
+We compute residue-level sensitivity, specificity, balanced accuracy (\bacc), MCC, precision,
+F1 and ROC-AUC, pooled over residues following CAID's ``dataset'' convention. Uncertainty comes
+from bootstrap resampling \emph{over targets} (1000 resamples for binary metrics, 500 for AUC),
+which is CAID's own resampling unit and respects the fact that residues within a protein are not
+independent. All method-vs-\plddt comparisons use a paired bootstrap with identical target
+indices for both methods, so the interval is on the difference, with a two-sided bootstrap
+$p$-value. Clause tests \cone and \ctwo are one-sided bootstrap probabilities, \eg
+$P(\text{sensitivity} \ge 0.80)$ over resamples.
+
+\para{Two definitions of ``balanced accuracy on short segments''.} The folk claim does not define
+this quantity, so we compute two and report both. The \textbf{global-negative} (strict)
+definition pairs recall over positive residues in 1--19 aa regions with specificity over
+\emph{all} evaluated negatives, so a method cannot buy short-region recall with false positives
+elsewhere. The \textbf{locally-flanked} (generous) definition scores each region only against
+the ordered residues immediately flanking it (up to $\lceil L/2 \rceil$ evaluated negatives per
+side), which removes the influence of a method's global false-positive rate entirely. We also
+report region-level detection rates --- a region counts as detected when $\ge 25/50/75\%$ of its
+evaluated residues are predicted disordered --- since the claim is phrased about regions.
+
+\subsection{Pipeline validation}
+\label{sec:validation}
+
+Before running any experiment we validated the pipeline against the official CAID outputs.
+For every full-coverage method our pooled AUC reproduces the published value to three decimals
+on all four references (\eg IUPred3 0.8854 vs 0.885, ESpritz-D 0.8989 vs 0.899, MobiDB-lite
+0.8680 vs 0.868, SETH-1 0.9115 vs 0.911 on \caidtwo \dpdb; flDPnn 0.8609 vs 0.861 on \caidthree
+\dpdb). One trap is worth flagging: the official timing file is keyed by software \emph{group}
+and reports the group's best member, so the \textsc{AlphaFold-disorder} group value of
+0.947--0.95 is \afrsa (ours 0.9443/0.9498), not \afplddt (ours 0.9287/0.9342). Our threshold
+sweep matches the official per-threshold specificity to three decimals at every probed
+threshold. Finally, parsing \plddt out of the \afdb coordinates and applying $1-\plddt/100$
+reproduces the CAID scores at pooled Pearson $r = 0.9925$ over 323,327 residues in 567 targets
+(median per-target $r=0.9955$; median residual 1.14 \plddt units), confirming that the submitted
+baseline is the standard \plddt. The residual is \afdb release drift between the CAID submission
+and our 2026 snapshot; all benchmark results use the official CAID prediction files, so it does
+not propagate.
+
+\subsection{Reproducibility}
+
+Python 3.12.8 with numpy 2.5.3, scipy 1.18.1, pandas 3.0.5, scikit-learn 1.9.0, biopython 1.88.
+Seed 42 throughout; all bootstrap index matrices are seeded and shared across methods so that
+paired comparisons use identical resamples. No model is trained or run --- all predictions were
+downloaded --- so the analysis is CPU-only and completes in under 20 minutes of wall clock.
+Re-running the length-stratified and mechanism experiments end to end produced byte-identical
+output files.

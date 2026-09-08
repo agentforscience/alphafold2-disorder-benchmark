@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[final,main]{neurips_2025}  % "main" track option required by the .sty in camera-ready mode  % NEURIPS style
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}  % clickable links
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{xspace}
+\usepackage{natbib}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+% Import command files
+\input{commands/math}
+\input{commands/general}
+\input{commands/macros}
+
+\captionsetup[table]{aboveskip=4pt,belowskip=4pt}
+\captionsetup[figure]{aboveskip=4pt,belowskip=4pt}
+\captionsetup[subfigure]{aboveskip=2pt,belowskip=2pt}
+
+\bibliographystyle{plainnat}
+
+\title{Is \texorpdfstring{pLDDT $<$ 50}{pLDDT < 50} a Disorder Detector?\\
+An Operating-Point Audit of AlphaFold2 Confidence Against Experimental Disorder Annotations}
+
+\author{NeuriCo}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/methodology}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+\bibliography{references}
+
+\appendix
+\input{appendix/appendix}
+
+\end{document}

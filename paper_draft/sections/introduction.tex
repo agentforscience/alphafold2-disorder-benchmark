@@ -1,0 +1,72 @@
+\section{Introduction}
+\label{sec:intro}
+
+AlphaFold2 attaches a per-residue confidence score, \plddt, to every model it
+builds~\citep{jumper2021}. Almost immediately after the human proteome was released, it was
+noticed that regions with low \plddt line up strikingly well with known intrinsically
+disordered regions (\idrs)~\citep{tunyasuvunakool2021}. That observation hardened into a rule
+of thumb: \emph{pLDDT $<$ 50 means disordered}. The rule is now used every day to trim models,
+to annotate the dark proteome, and to nominate \idr candidates for experiment, across a database
+of more than 200 million structures~\citep{varadi2022}. If it is miscalibrated, the error
+propagates silently into every study that adopts it.
+
+\para{The rule has never been checked where it is used.} Prior evaluations of \plddt as a
+disorder signal report ROC-AUC~\citep{piovesan2022,kurgan2023}. AUC is threshold-free, and a
+threshold-free summary is structurally incapable of adjudicating a claim about a specific
+cutoff. Nobody has reported the sensitivity and specificity of the literal \plddtrule cut,
+stratified by region length, on both of the reference conventions that the community's own
+blind assessment publishes. That is the gap we fill.
+
+\para{What exactly is being claimed?} The folk rule comes bundled with a set of quantitative
+expectations that are worth writing down and testing separately. We decompose the standard
+framing into four claims: \cone the rule finds long ($>$30 aa) \idrs with sensitivity above
+0.8; \ctwo its specificity is below 0.7; \cthree it works this way because \plddt conflates
+conformational flexibility with prediction uncertainty; and \cfour dedicated disorder
+predictors achieve 10--15\% better balanced accuracy on short ($<$20 aa) disordered segments.
+Each clause implies a different remedy, so each deserves its own measurement.
+
+\para{Our approach.} We do not train or run a new predictor. The CAID blind
+assessments~\citep{delconte2023,mehdiabadi2026} already contain the experimental ground truth
+(derived from \disprot~\citep{quaglia2022}) and the per-residue outputs of every participating
+method, \emph{including the official AlphaFold-pLDDT baseline that the rule refers to}. We evaluate
+that baseline at the exact operating point in question, on all four combinations of CAID round
+(2, 3) and reference convention (\dpdb, \dnox), with bootstrap confidence intervals resampled
+over targets, coverage-matched target sets, and three distinct threshold conventions for every
+comparator (\figref{fig:clause}). We additionally re-parse 588 \afdb models to characterise,
+structurally, the residues the rule gets wrong.
+
+\para{What we find.} Three of the four clauses are false and one is right.
+Sensitivity is $0.60$--$0.63$, and $0.63$--$0.65$ on long regions --- $P(\text{sens} \ge 0.80) =
+0.000$ in every setting (\cone falsified). Specificity is $0.98$ under \dpdb and $0.67$--$0.76$
+under \dnox, so \ctwo describes an annotation convention rather than a predictor. After fair
+threshold calibration, \emph{zero} of 174 method\,$\times$\,dataset comparisons beat \plddt on
+short segments and the median comparator is $1.5$--$8.7$ percentage points worse, yet the very
+same claim is exactly reproducible at a shared naive 0.5 cut, where 9 of 52 predictors land
+inside the hypothesised $+10$ to $+15$\pp band (\cfour falsified, and diagnosed as a
+calibration artefact). The mechanism clause survives four independent tests: solvent
+accessibility read from the same coordinates beats \plddt by $+0.015$ to $+0.056$ AUC
+($p \le 0.02$ everywhere), a stronger folding model does not improve \plddt, \plddt is near
+chance \emph{within} its own low band (AUC $0.44$--$0.63$) where geometry still separates
+disorder at $0.56$--$0.83$, and the disorder the rule misses is confidently modelled
+(mean \plddt 70--74) and solvent-exposed (mean RSA $0.46$--$0.51$).
+
+\para{Contributions.}
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=2pt]
+    \item We report the first operating-point-resolved evaluation of the literal \plddtrule
+    rule --- sensitivity, specificity, balanced accuracy and MCC with bootstrap CIs --- on all
+    four CAID round $\times$ reference-convention combinations, and show the rule is
+    high-precision and low-recall, missing $\approx$40\% of annotated disorder.
+    \item We stratify \emph{regions} (not proteins) into $<$20 / 20--30 / $>$30 aa bins under
+    two explicitly stated definitions of ``balanced accuracy on short segments'', and show that
+    no dedicated predictor significantly beats \plddt there once thresholds are calibrated.
+    \item We diagnose the widely believed short-segment advantage as a threshold-calibration
+    artefact, reproducing it exactly at a shared 0.5 cut and dissolving it under calibration ---
+    a methodological warning that generalises beyond disorder prediction.
+    \item We test the conflation mechanism with the structure model held fixed, comparing
+    \plddt against solvent accessibility of the same AlphaFold2 coordinates, and characterise
+    the missed disorder as exposed pseudostructure rather than conditional folding.
+\end{itemize}
+
+\secref{sec:related} places the work against prior evaluations, \secref{sec:method} describes
+the data, panel, operating points and statistics, \secref{sec:results} reports the four clause
+tests, and \secref{sec:discussion} discusses limitations and practical consequences.

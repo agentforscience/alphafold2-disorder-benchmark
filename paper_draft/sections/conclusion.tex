@@ -1,0 +1,38 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We audited the rule ``AlphaFold2 \plddt $<$ 50 means intrinsically disordered'' at the operating
+point at which it is actually used, on the CAID round-2 and round-3 blind assessments, under
+both official reference conventions, against 35--52 dedicated disorder predictors.
+
+\para{Findings.} \plddtrule does not identify disordered regions with sensitivity above 0.8: it
+achieves $0.60$--$0.63$ overall and $0.63$--$0.65$ on regions longer than 30 aa, missing roughly
+40\% of experimentally annotated disorder, with $P(\text{sens} \ge 0.80) = 0.000$ in every
+setting tested. Its specificity is 0.98 or 0.67--0.76 depending purely on whether the benchmark
+counts X-ray-missing residues as negatives, so the ``specificity $<$ 0.7'' clause describes an
+annotation convention rather than a predictor. Dedicated predictors do not achieve 10--15\%
+better balanced accuracy on short segments: after fair threshold calibration, none of them is
+significantly better and the median is $1.5$--$8.7$ points \emph{worse}; the claimed gap is
+reproducible only when all methods are cut at a shared, arbitrary threshold. The mechanism,
+however, is correct and can be demonstrated directly: \plddt conflates flexibility with model
+confidence, which is why reading solvent accessibility out of the same AlphaFold2 coordinates is
+significantly better on every reference set, and why the disorder \plddt misses is confidently
+modelled and solvent-exposed.
+
+\para{Takeaway.} \plddtrule is a high-precision, low-recall disorder detector, and only under
+the \dpdb negative-set convention. Raise the cutoff to $\approx$70 if recall matters, prefer the
+free geometric readout of the same model, and state which negative-set convention you mean.
+
+\para{Future work.} Three directions follow directly. The 77--83\% of missed disorder that is
+not buried should be recoverable by a rule combining \plddt with local RSA and secondary-structure
+content; quantifying the ceiling of that combination would say how much of the gap is closable
+without leaving the AlphaFold model. The buried false negatives should be cross-referenced
+against curated conditionally folded \idr sets~\citep{alderson2023} to check that they are the
+same population, and tested against partner-aware predictions. And predicted aligned error is
+the natural next signal, since a residue can carry high \plddt locally while being poorly
+positioned relative to the rest of the chain --- which is exactly the pseudostructure signature.
+Two questions remain open: whether the \plddt saturation we observe below 50 is intrinsic to the
+lDDT target or an artefact of how AlphaFold's confidence head is trained, and whether a benchmark
+can be built whose negatives are defined by positive experimental evidence of order rather than
+by absence of evidence of disorder. Both CAID conventions are proxies for a reference set that
+nobody has built.

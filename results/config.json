@@ -1,0 +1,36 @@
+{
+  "seed": 42,
+  "python": "3.12.8",
+  "platform": "Linux-5.15.0-187-generic-x86_64-with-glibc2.35",
+  "cpu_count": 32,
+  "libraries": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0",
+    "matplotlib": "3.11.1",
+    "biopython": "1.88"
+  },
+  "gpu": "4x NVIDIA RTX A6000 (48 GB) present but unused: the analysis is CPU-only (no model training or inference; all predictions were downloaded from CAID)",
+  "bootstrap": {
+    "n_boot_binary_metrics": 1000,
+    "n_boot_auc": 500,
+    "resampling_unit": "target (protein)",
+    "paired": true
+  },
+  "cross_validation": {
+    "threshold_calibration": "5x2-fold over targets",
+    "logistic_probe": "5-fold GroupKFold, grouped by target"
+  },
+  "operating_points": {
+    "literal": "score > 0.50  (== pLDDT < 50)",
+    "calibrated": "MCC-maximising threshold on the full data",
+    "content": "threshold matching the true number of disordered residues"
+  },
+  "reference_versions": {
+    "caid2_*": "official CAID2",
+    "caid3_*": "official CAID3 v3"
+  },
+  "api_cost_usd": 0.0,
+  "note": "No LLM or external API calls were made; this is a bioinformatics benchmark analysis over pre-computed CAID predictions and AlphaFold DB structures."
+}

@@ -1,0 +1,216 @@
+\begin{thebibliography}{24}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Alderson et~al.(2023)Alderson, Priti{\v{s}}anac, Kolari{\'c}, Moses,
+  and Forman-Kay]{alderson2023}
+T.~Reid Alderson, Iva Priti{\v{s}}anac, {\DJ}or{\dj}e Kolari{\'c}, Alan~M.
+  Moses, and Julie~D. Forman-Kay.
+\newblock Systematic identification of conditionally folded intrinsically
+  disordered regions by {AlphaFold2}.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 120\penalty0
+  (44):\penalty0 e2304302120, 2023.
+\newblock \doi{10.1073/pnas.2304302120}.
+
+\bibitem[Bhattacharya et~al.(2022)Bhattacharya, Roche, Shuvo, and
+  Bhattacharya]{bhattacharya2022}
+Sushmita Bhattacharya, Rahmatullah Roche, Md~Hossain Shuvo, and Debswapna
+  Bhattacharya.
+\newblock Digging into the 3{D} structure predictions of {AlphaFold2} with low
+  confidence: Disorder and beyond.
+\newblock \emph{Biomolecules}, 12\penalty0 (10):\penalty0 1442, 2022.
+\newblock \doi{10.3390/biom12101442}.
+
+\bibitem[Chakravarty and Porter(2022)]{chakravarty2022}
+Devlina Chakravarty and Lauren~L. Porter.
+\newblock {AlphaFold2} fails to predict protein fold switching.
+\newblock \emph{Protein Science}, 31\penalty0 (6):\penalty0 e4353, 2022.
+\newblock \doi{10.1002/pro.4353}.
+
+\bibitem[Del~Conte et~al.(2023)Del~Conte, Mehdiabadi, Bouhraoua, Miguel~Monzon,
+  Tosatto, and Piovesan]{delconte2023}
+Alessio Del~Conte, Maria Mehdiabadi, Adel Bouhraoua, Alexander Miguel~Monzon,
+  Silvio C.~E. Tosatto, and Damiano Piovesan.
+\newblock Critical assessment of protein intrinsic disorder prediction ({CAID})
+  --- results of round 2.
+\newblock \emph{Proteins: Structure, Function, and Bioinformatics}, 91\penalty0
+  (12):\penalty0 1925--1934, 2023.
+\newblock \doi{10.1002/prot.26582}.
+
+\bibitem[Emenecker et~al.(2021)Emenecker, Griffith, and
+  Holehouse]{emenecker2021}
+Ryan~J. Emenecker, Daniel Griffith, and Alex~S. Holehouse.
+\newblock Metapredict: a fast, accurate, and easy-to-use predictor of consensus
+  disorder and structure.
+\newblock \emph{Biophysical Journal}, 120\penalty0 (20):\penalty0 4312--4319,
+  2021.
+\newblock \doi{10.1016/j.bpj.2021.08.039}.
+
+\bibitem[Erd{\H{o}}s et~al.(2021)Erd{\H{o}}s, Pajkos, and
+  Doszt{\'a}nyi]{erdos2021}
+G{\'a}bor Erd{\H{o}}s, M{\'a}ty{\'a}s Pajkos, and Zsuzsanna Doszt{\'a}nyi.
+\newblock {IUPred3}: prediction of protein disorder enhanced with unambiguous
+  experimental annotation and visualization of evolutionary conservation.
+\newblock \emph{Nucleic Acids Research}, 49\penalty0 (W1):\penalty0 W297--W303,
+  2021.
+\newblock \doi{10.1093/nar/gkab408}.
+
+\bibitem[Guo et~al.(2022)Guo, Perminov, Bekele, Kedziora, Farajollahi,
+  Varaljay, Hinkle, Molinero, Meister, Hung, Dennis, Kelley-Loughnane, and
+  Berry]{guo2022}
+Hao-Bo Guo, Alexander Perminov, Selemon Bekele, Gary Kedziora, Sanaz
+  Farajollahi, Vanessa Varaljay, Kevin Hinkle, Valeria Molinero, Konrad
+  Meister, Chia Hung, Patrick Dennis, Nancy Kelley-Loughnane, and Rajiv Berry.
+\newblock {AlphaFold2} models indicate that protein sequence determines both
+  structure and dynamics.
+\newblock \emph{Scientific Reports}, 12:\penalty0 10696, 2022.
+\newblock \doi{10.1038/s41598-022-14382-9}.
+
+\bibitem[Hanson et~al.(2019)Hanson, Paliwal, Litfin, and Zhou]{hanson2019}
+Jack Hanson, Kuldip~K. Paliwal, Thomas Litfin, and Yaoqi Zhou.
+\newblock {SPOT-Disorder2}: improved protein intrinsic disorder prediction by
+  ensembled deep learning.
+\newblock \emph{Genomics, Proteomics \& Bioinformatics}, 17\penalty0
+  (6):\penalty0 645--656, 2019.
+\newblock \doi{10.1016/j.gpb.2019.01.004}.
+
+\bibitem[Hu et~al.(2021)Hu, Katuwawala, Wang, Wu, Ghadermarzi, Gao, and
+  Kurgan]{hu2021}
+Gang Hu, Akila Katuwawala, Kui Wang, Zhonghua Wu, Sina Ghadermarzi, Jianzhao
+  Gao, and Lukasz Kurgan.
+\newblock fl{DPnn}: Accurate intrinsic disorder prediction with putative
+  propensities of disorder functions.
+\newblock \emph{Nature Communications}, 12:\penalty0 4438, 2021.
+\newblock \doi{10.1038/s41467-021-24773-7}.
+
+\bibitem[Ilzh{\"o}fer et~al.(2022)Ilzh{\"o}fer, Heinzinger, and
+  Rost]{ilzhofer2022}
+Dagmar Ilzh{\"o}fer, Michael Heinzinger, and Burkhard Rost.
+\newblock {SETH} predicts nuances of residue disorder from protein embeddings.
+\newblock \emph{Frontiers in Bioinformatics}, 2:\penalty0 1019597, 2022.
+\newblock \doi{10.3389/fbinf.2022.1019597}.
+
+\bibitem[Jones and Cozzetto(2015)]{jones2015}
+David~T. Jones and Domenico Cozzetto.
+\newblock {DISOPRED3}: precise disordered region predictions with annotated
+  protein-binding activity.
+\newblock \emph{Bioinformatics}, 31\penalty0 (6):\penalty0 857--863, 2015.
+\newblock \doi{10.1093/bioinformatics/btu744}.
+
+\bibitem[Jumper et~al.(2021)Jumper, Evans, Pritzel, Green, Figurnov,
+  Ronneberger, Tunyasuvunakool, Bates, {\v{Z}}{\'i}dek, Potapenko,
+  et~al.]{jumper2021}
+John Jumper, Richard Evans, Alexander Pritzel, Tim Green, Michael Figurnov,
+  Olaf Ronneberger, Kathryn Tunyasuvunakool, Russ Bates, Augustin
+  {\v{Z}}{\'i}dek, Anna Potapenko, et~al.
+\newblock Highly accurate protein structure prediction with {AlphaFold}.
+\newblock \emph{Nature}, 596\penalty0 (7873):\penalty0 583--589, 2021.
+\newblock \doi{10.1038/s41586-021-03819-2}.
+
+\bibitem[Kurgan et~al.(2023)Kurgan, Hu, Wang, Ghadermarzi, Zhao, Malhis,
+  Erd{\H{o}}s, Gsponer, Uversky, and Doszt{\'a}nyi]{kurgan2023}
+Lukasz Kurgan, Gang Hu, Kui Wang, Sina Ghadermarzi, Bi~Zhao, Nawar Malhis,
+  G{\'a}bor Erd{\H{o}}s, J{\"o}rg Gsponer, Vladimir~N. Uversky, and Zsuzsanna
+  Doszt{\'a}nyi.
+\newblock Tutorial: a guide for the selection of fast and accurate
+  computational tools for the prediction of intrinsic disorder in proteins and
+  comparative assessment of {AlphaFold2} and dedicated disorder predictors.
+\newblock \emph{Computational and Structural Biotechnology Journal}, 2023.
+\newblock \doi{10.1016/j.csbj.2023.12.001}.
+
+\bibitem[Mehdiabadi et~al.(2026)Mehdiabadi, Del~Conte, Bouhraoua, Tosatto, and
+  Piovesan]{mehdiabadi2026}
+Maria Mehdiabadi, Alessio Del~Conte, Adel Bouhraoua, Silvio C.~E. Tosatto, and
+  Damiano Piovesan.
+\newblock Critical assessment of protein intrinsic disorder prediction ({CAID})
+  --- results of round 3.
+\newblock \emph{Proteins: Structure, Function, and Bioinformatics}, pages
+  414--424, 2026.
+
+\bibitem[Necci et~al.(2017)Necci, Piovesan, Doszt{\'a}nyi, and
+  Tosatto]{necci2017}
+Marco Necci, Damiano Piovesan, Zsuzsanna Doszt{\'a}nyi, and Silvio C.~E.
+  Tosatto.
+\newblock {MobiDB-lite}: fast and highly specific consensus prediction of
+  intrinsic disorder in proteins.
+\newblock \emph{Bioinformatics}, 33\penalty0 (9):\penalty0 1402--1404, 2017.
+\newblock \doi{10.1093/bioinformatics/btx015}.
+
+\bibitem[Necci et~al.(2021)Necci, Piovesan, and Tosatto]{necci2021}
+Marco Necci, Damiano Piovesan, and Silvio C.~E. Tosatto.
+\newblock Critical assessment of protein intrinsic disorder prediction.
+\newblock \emph{Nature Methods}, 18\penalty0 (5):\penalty0 472--481, 2021.
+\newblock \doi{10.1038/s41592-021-01117-3}.
+
+\bibitem[Piovesan et~al.(2022)Piovesan, Monzon, and Tosatto]{piovesan2022}
+Damiano Piovesan, Alexander~Miguel Monzon, and Silvio C.~E. Tosatto.
+\newblock Intrinsic protein disorder and conditional folding in {AlphaFoldDB}.
+\newblock \emph{Protein Science}, 31\penalty0 (11):\penalty0 e4466, 2022.
+\newblock \doi{10.1002/pro.4466}.
+
+\bibitem[Piovesan et~al.(2025)Piovesan, Del~Conte, Mehdiabadi, Aspromonte,
+  Blum, Tesei, von B{\"u}low, Lindorff-Larsen, and Tosatto]{piovesan2025}
+Damiano Piovesan, Alessio Del~Conte, Maria Mehdiabadi, Maria~Cristina
+  Aspromonte, Marco Blum, Giulio Tesei, S{\"o}ren von B{\"u}low, Kresten
+  Lindorff-Larsen, and Silvio C.~E. Tosatto.
+\newblock {MobiDB}: 10 years of intrinsically disordered proteins.
+\newblock \emph{Nucleic Acids Research}, 53\penalty0 (D1):\penalty0 D495--D503,
+  2025.
+\newblock \doi{10.1093/nar/gkae969}.
+
+\bibitem[Quaglia et~al.(2022)Quaglia, Meszaros, Salladini, Hatos, Pancsa,
+  Chemes, Pajkos, Lazar, Pena-Diaz, Santos, et~al.]{quaglia2022}
+Federica Quaglia, Balint Meszaros, Edoardo Salladini, Andras Hatos, Rita
+  Pancsa, Lucia~B. Chemes, Matyas Pajkos, Tamas Lazar, Sergio Pena-Diaz, Jaime
+  Santos, et~al.
+\newblock {DisProt} in 2022: improved quality and accessibility of protein
+  intrinsic disorder annotation.
+\newblock \emph{Nucleic Acids Research}, 50\penalty0 (D1):\penalty0 D480--D487,
+  2022.
+\newblock \doi{10.1093/nar/gkab1082}.
+
+\bibitem[Richardson et~al.(2025)Richardson, Read, and
+  Terwilliger]{richardson2025}
+Christopher~J. Richardson, Randy~J. Read, and Thomas~C. Terwilliger.
+\newblock Categorizing prediction modes within low-{pLDDT} regions of
+  {AlphaFold} models.
+\newblock \emph{Acta Crystallographica Section D: Structural Biology}, 2025.
+
+\bibitem[Tunyasuvunakool et~al.(2021)Tunyasuvunakool, Adler, Wu, Green,
+  Zielinski, {\v{Z}}{\'i}dek, Bridgland, Cowie, Meyer, Laydon,
+  et~al.]{tunyasuvunakool2021}
+Kathryn Tunyasuvunakool, Jonas Adler, Zachary Wu, Tim Green, Michal Zielinski,
+  Augustin {\v{Z}}{\'i}dek, Alex Bridgland, Andrew Cowie, Clemens Meyer, Agata
+  Laydon, et~al.
+\newblock Highly accurate protein structure prediction for the human proteome.
+\newblock \emph{Nature}, 596\penalty0 (7873):\penalty0 590--596, 2021.
+\newblock \doi{10.1038/s41586-021-03828-1}.
+
+\bibitem[Varadi et~al.(2022)Varadi, Anyango, Deshpande, Nair, Natassia,
+  Yordanova, Yuan, Stroe, Wood, Laydon, et~al.]{varadi2022}
+Mihaly Varadi, Stephen Anyango, Mandar Deshpande, Sreenath Nair, Cindy
+  Natassia, Galabina Yordanova, David Yuan, Oana Stroe, Gemma Wood, Agata
+  Laydon, et~al.
+\newblock {AlphaFold} protein structure database: massively expanding the
+  structural coverage of protein-sequence space with high-accuracy models.
+\newblock \emph{Nucleic Acids Research}, 50\penalty0 (D1):\penalty0 D439--D444,
+  2022.
+\newblock \doi{10.1093/nar/gkab1061}.
+
+\bibitem[Walsh et~al.(2012)Walsh, Martin, Di~Domenico, and Tosatto]{walsh2012}
+Ian Walsh, Alberto J.~M. Martin, Tomas Di~Domenico, and Silvio C.~E. Tosatto.
+\newblock {ESpritz}: accurate and fast prediction of protein disorder.
+\newblock \emph{Bioinformatics}, 28\penalty0 (4):\penalty0 503--509, 2012.
+\newblock \doi{10.1093/bioinformatics/btr682}.
+
+\bibitem[Wilson et~al.(2022)Wilson, Choy, and Karttunen]{wilson2022}
+Carter~J. Wilson, Wing-Yiu Choy, and Mikko Karttunen.
+\newblock {AlphaFold2}: A role for disordered protein/region prediction?
+\newblock \emph{International Journal of Molecular Sciences}, 23\penalty0
+  (9):\penalty0 4591, 2022.
+\newblock \doi{10.3390/ijms23094591}.
+
+\end{thebibliography}

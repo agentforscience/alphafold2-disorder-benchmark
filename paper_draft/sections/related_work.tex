@@ -1,0 +1,56 @@
+\section{Related Work}
+\label{sec:related}
+
+\para{AlphaFold confidence as a disorder signal.} \citet{jumper2021} introduced \plddt as a
+predicted lDDT-C$\alpha$ against the unknown true structure, and \citet{tunyasuvunakool2021}
+reported the correlation between low-confidence regions and known \idrs at proteome scale.
+\citet{piovesan2022} turned that correlation into concrete, evaluable baselines:
+\afplddt with score $=1-\plddt/100$, and \afrsa, the DSSP relative solvent accessibility of the
+same model smoothed over a 25-residue window. These are the definitions CAID has used ever
+since, and the first of them is exactly the object of the folk rule --- score $>0.50$ is
+identically \plddtrule. \citet{wilson2022} asked early whether \plddt should be used as a
+disorder predictor at all and cautioned that a real correlation does not make the semantics the
+same. All of this work reports AUC. Unlike these studies, we evaluate the baseline at the
+specific cutoff practitioners actually apply.
+
+\para{Blind assessment of disorder predictors.} CAID~\citep{necci2021} established the
+evaluation protocol we inherit: \disprot-derived references~\citep{quaglia2022}, per-residue
+scores, blind submission, bootstrap over targets. Round 2~\citep{delconte2023} was the first to
+include the AlphaFold baselines as official entries; round 3~\citep{mehdiabadi2026} added 24
+methods, reported that protein language models now lead, and noted that \afplddt ranks 11th
+while \afthreeplddt ranks 13th on \dpdb. CAID publishes two disorder references that differ
+\emph{only} in how a negative is defined: \dpdb counts as negative only residues observed in an
+experimental PDB structure, whereas \dnox counts every non-annotated residue as negative. CAID3
+quantifies the divergence (57.3\% vs 23.9\% positive content on shared proteins) but treats it
+as a caveat. We treat it as the dominant term in specificity and report every result under both
+conventions.
+
+\para{The closest prior comparison.} \citet{kurgan2023} is the nearest work to ours: 20
+comparators on CAID1, AF2-\plddt at AUC 0.722 against flDPnn~\citep{hu2021} at 0.814 and
+AF2-RSA at 0.768, with a long ($>$30) versus short ($\le$30) \idr split. Two features of that
+design leave our questions open. Their split is at the \emph{protein} level --- proteins whose
+\idrs are all short --- rather than at the region level, so the $<$20 aa region bin named in the
+folk rule is unexamined; and their metric is AUC, so no operating point is adjudicated. They
+also state the conflation mechanism informally, observing that low \plddt could mean the
+structure space is poorly covered \emph{or} that the segment is disordered, while unusually high
+solvent accessibility ``seems to be a better proxy'' for disorder. Building on that observation,
+we turn it into a controlled test: same coordinates, two readouts, paired bootstrap. We also
+adopt their content-matched calibration as one of our three operating points.
+
+\para{What low confidence actually means.} \citet{richardson2025} partition low-\plddt residues
+into barbed wire, pseudostructure, near-predictive and unphysical modes, and find that the
+barbed-wire and near-predictive curves cross near \plddt 50 --- so a cut at 50 cleanly removes
+non-predictive residues but cannot separate pseudostructure. Symmetrically,
+\citet{alderson2023} show that \idrs which conditionally fold are modelled with \emph{high}
+\plddt. Both halves of the conflation are therefore documented in the literature; what is
+missing is a measurement of how much of the rule's error each half accounts for. We supply that
+decomposition. Supporting mechanistic work reports that \plddt tracks dynamics rather than model
+error alone~\citep{guo2022}, and that AlphaFold2 collapses conformational heterogeneity to a
+single state~\citep{chakravarty2022,bhattacharya2022}.
+
+\para{Threshold calibration in method comparison.} \citet{kurgan2023} explicitly calibrate
+binary predictions to reproduce the correct number of disordered residues, and CAID reports
+threshold-free metrics precisely because submitted scores are not mutually calibrated. Our
+\cfour analysis shows what happens when this discipline is dropped: the comparison at a shared
+0.5 cut is not a comparison of methods but of operating points, and it produces a specific,
+reproducible, and wrong quantitative conclusion.

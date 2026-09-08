@@ -1,0 +1,20 @@
+AlphaFold DB covers more than 200 million proteins, and the rule ``\plddt $<$ 50 means
+intrinsically disordered'' has become an everyday working heuristic for trimming models and
+annotating the dark proteome. The rule has never been validated at the operating point at
+which it is used: the literature reports ROC-AUC, a threshold-free summary that cannot
+adjudicate a claim about a specific cutoff. We audit the rule directly on the CAID round-2 and
+round-3 blind assessments, across both official reference conventions (\dpdb and \dnox), with
+bootstrap confidence intervals over targets and coverage-matched target sets, against a panel
+of 37--56 dedicated disorder predictors. We find that \plddtrule has sensitivity 0.60--0.63
+(0.63--0.65 restricted to regions longer than 30 residues), not above 0.8: not one of 1000
+bootstrap resamples reaches 0.80 in any of four settings. Its specificity is 0.98 under \dpdb
+and 0.67--0.76 under \dnox --- a 30-point swing produced entirely by how the benchmark defines
+a negative, not by AlphaFold. Once every method is threshold-calibrated, none of 174
+method\,$\times$\,dataset comparisons beats \plddt on short ($<$20 aa) segments, and the median
+dedicated predictor is 1.5--8.7 points \emph{worse}; the widely assumed 10--15\% advantage is
+exactly reproducible at a shared naive 0.5 cut and vanishes after calibration. What survives is
+the mechanism: reading solvent accessibility out of the \emph{same} AlphaFold2 coordinates is
+significantly better on every reference set ($\Delta$AUC $+0.015$ to $+0.056$, all $p \le 0.02$),
+and the disorder \plddt misses is confidently modelled and solvent-exposed.
+\plddtrule is a high-precision, low-recall detector; users who need recall should raise the
+cutoff to $\approx$70 and prefer the geometric readout of the same model.
