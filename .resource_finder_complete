@@ -1,0 +1,12 @@
+Resource finding phase completed successfully.
+Timestamp: 2026-09-08T17:54:14+00:00
+Papers downloaded: 88 unique (26 PDFs + 84 full-text Markdown conversions); 556 search hits catalogued
+Datasets downloaded: 3 (CAID2/CAID3 references+predictions+metrics, DisProt 3337 proteins, AlphaFold DB 588 structures)
+Repositories cloned: 3 (AlphaFold-disorder, CAID, caid-reference) + 3 local tools written and tested
+
+Deliverables: literature_review.md, resources.md, planning.md (direction budget),
+papers/README.md, datasets/README.md, code/README.md, results/preliminary_findings.{json,txt}
+Environment: .venv (uv, Python 3.12), pyproject.toml with package=false
+
+Preliminary feasibility result: at pLDDT<50, sensitivity is 0.60-0.63 (hypothesis predicts >0.8)
+and specificity is 0.98 on Disorder-PDB vs 0.67-0.76 on Disorder-NOX (hypothesis predicts <0.7).

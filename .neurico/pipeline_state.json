@@ -1,0 +1,104 @@
+{
+  "created_at": "2026-09-08T17:25:23.507687Z",
+  "stages": {
+    "resource_finder": {
+      "status": "completed",
+      "started_at": "2026-09-08T17:25:23.528032Z",
+      "completed_at": "2026-09-08T17:54:31.900326Z",
+      "success": true,
+      "outputs": {
+        "literature_review": "/workspaces/do_alphafold2_confidence_score_20260908_172423_50e9db22/literature_review.md",
+        "resources_catalog": "/workspaces/do_alphafold2_confidence_score_20260908_172423_50e9db22/resources.md",
+        "papers_dir": "/workspaces/do_alphafold2_confidence_score_20260908_172423_50e9db22/papers",
+        "datasets_dir": "/workspaces/do_alphafold2_confidence_score_20260908_172423_50e9db22/datasets",
+        "code_dir": "/workspaces/do_alphafold2_confidence_score_20260908_172423_50e9db22/code"
+      },
+      "expected_outputs": [
+        "literature_review.md",
+        "resources.md"
+      ],
+      "next_steps": [
+        "Review the literature and resource catalog before running experiments."
+      ],
+      "workspace_check": {
+        "expected": "/workspaces/do_alphafold2_confidence_score_20260908_172423_50e9db22",
+        "actual": "/app",
+        "exists": true,
+        "is_directory": true,
+        "cwd_matches": false,
+        "healthy": true
+      },
+      "workspace_check_at_completion": {
+        "expected": "/workspaces/do_alphafold2_confidence_score_20260908_172423_50e9db22",
+        "actual": "/app",
+        "exists": true,
+        "is_directory": true,
+        "cwd_matches": false,
+        "healthy": true
+      },
+      "output_validation": {
+        "valid": true,
+        "expected": [
+          "literature_review.md",
+          "resources.md"
+        ],
+        "present": [
+          "literature_review.md",
+          "resources.md"
+        ],
+        "missing": [],
+        "outside_workspace": []
+      }
+    },
+    "experiment_runner": {
+      "status": "completed",
+      "started_at": "2026-09-08T17:54:31.925249Z",
+      "completed_at": "2026-09-08T18:45:59.104213Z",
+      "success": true,
+      "outputs": {
+        "success": true,
+        "return_code": 0,
+        "elapsed_time": 3087.1238441467285,
+        "log_file": "/workspaces/do_alphafold2_confidence_score_20260908_172423_50e9db22/logs/execution_claude.log",
+        "transcript_file": "/workspaces/do_alphafold2_confidence_score_20260908_172423_50e9db22/logs/execution_claude_transcript.jsonl",
+        "background_processes_terminated": false
+      },
+      "expected_outputs": [
+        "REPORT.md"
+      ],
+      "next_steps": [
+        "Validate the report and experimental artifacts before finalizing."
+      ],
+      "workspace_check": {
+        "expected": "/workspaces/do_alphafold2_confidence_score_20260908_172423_50e9db22",
+        "actual": "/app",
+        "exists": true,
+        "is_directory": true,
+        "cwd_matches": false,
+        "healthy": true
+      },
+      "workspace_check_at_completion": {
+        "expected": "/workspaces/do_alphafold2_confidence_score_20260908_172423_50e9db22",
+        "actual": "/app",
+        "exists": true,
+        "is_directory": true,
+        "cwd_matches": false,
+        "healthy": true
+      },
+      "output_validation": {
+        "valid": true,
+        "expected": [
+          "REPORT.md"
+        ],
+        "present": [
+          "REPORT.md"
+        ],
+        "missing": [],
+        "outside_workspace": []
+      }
+    }
+  },
+  "current_stage": null,
+  "completed": true,
+  "completed_at": "2026-09-08T18:45:59.141461Z"
+}
