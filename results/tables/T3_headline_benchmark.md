@@ -1,0 +1,110 @@
+| Reference set      | Method               | Operating point   |   Threshold |   Sens |   Spec |   BACC | BACC 95% CI    |   MCC |   AUC | Rank   |
+|:-------------------|:---------------------|:------------------|------------:|-------:|-------:|-------:|:---------------|------:|------:|:-------|
+| CAID2 Disorder-PDB | AlphaFold-disorder * | literal           |       0.5   |  0.576 |  0.988 |  0.782 | [0.755, 0.807] | 0.672 | 0.932 | 21/37  |
+| CAID2 Disorder-PDB | AlphaFold-disorder * | calibrated        |       0.308 |  0.764 |  0.956 |  0.86  | [0.836, 0.883] | 0.752 | 0.932 | 9/37   |
+| CAID2 Disorder-PDB | AlphaFold-rsa        | literal           |       0.5   |  0.844 |  0.935 |  0.89  | [0.869, 0.911] | 0.779 | 0.945 | 2/37   |
+| CAID2 Disorder-PDB | AlphaFold-rsa        | calibrated        |       0.533 |  0.82  |  0.951 |  0.886 | [0.863, 0.909] | 0.786 | 0.945 | 2/37   |
+| CAID2 Disorder-PDB | AIUPred              | literal           |       0.5   |  0.818 |  0.841 |  0.829 | [0.805, 0.853] | 0.628 | 0.902 | 10/37  |
+| CAID2 Disorder-PDB | AIUPred              | calibrated        |       0.679 |  0.694 |  0.952 |  0.823 | [0.792, 0.851] | 0.691 | 0.902 | 17/37  |
+| CAID2 Disorder-PDB | IUPred3              | literal           |       0.5   |  0.665 |  0.942 |  0.803 | [0.775, 0.830] | 0.65  | 0.885 | 19/37  |
+| CAID2 Disorder-PDB | IUPred3              | calibrated        |       0.512 |  0.65  |  0.948 |  0.799 | [0.771, 0.826] | 0.65  | 0.885 | 28/37  |
+| CAID2 Disorder-PDB | ESpritz-D            | literal           |       0.5   |  0.312 |  0.986 |  0.649 | [0.612, 0.691] | 0.45  | 0.89  | 30/37  |
+| CAID2 Disorder-PDB | ESpritz-D            | calibrated        |       0.254 |  0.769 |  0.87  |  0.819 | [0.789, 0.847] | 0.625 | 0.89  | 18/37  |
+| CAID2 Disorder-PDB | MobiDB-lite          | literal           |       0.5   |  0.5   |  0.973 |  0.736 | [0.712, 0.762] | 0.579 | 0.871 | 25/37  |
+| CAID2 Disorder-PDB | MobiDB-lite          | calibrated        |       0.25  |  0.7   |  0.913 |  0.807 | [0.785, 0.829] | 0.632 | 0.871 | 23/37  |
+| CAID2 Disorder-PDB | flDPnn               | literal           |       0.5   |  0.265 |  0.993 |  0.629 | [0.595, 0.668] | 0.425 | 0.892 | 33/37  |
+| CAID2 Disorder-PDB | flDPnn               | calibrated        |       0.167 |  0.706 |  0.897 |  0.802 | [0.774, 0.829] | 0.612 | 0.892 | 26/37  |
+| CAID2 Disorder-PDB | DISOPRED3-diso       | literal           |       0.5   |  0.683 |  0.961 |  0.822 | [0.795, 0.847] | 0.699 | 0.907 | 14/37  |
+| CAID2 Disorder-PDB | DISOPRED3-diso       | calibrated        |       0.41  |  0.722 |  0.946 |  0.834 | [0.809, 0.858] | 0.703 | 0.907 | 15/37  |
+| CAID2 Disorder-PDB | SETH-1               | literal           |       0.5   |  0.696 |  0.961 |  0.828 | [0.805, 0.852] | 0.709 | 0.913 | 12/37  |
+| CAID2 Disorder-PDB | SETH-1               | calibrated        |       0.426 |  0.762 |  0.938 |  0.85  | [0.826, 0.874] | 0.72  | 0.913 | 11/37  |
+| CAID2 Disorder-PDB | VSL2                 | literal           |       0.5   |  0.839 |  0.793 |  0.816 | [0.796, 0.836] | 0.589 | 0.892 | 18/37  |
+| CAID2 Disorder-PDB | VSL2                 | calibrated        |       0.643 |  0.716 |  0.919 |  0.817 | [0.794, 0.839] | 0.653 | 0.892 | 19/37  |
+| CAID2 Disorder-PDB | SPOT-Disorder2       | literal           |       0.5   |  0.749 |  0.976 |  0.862 | [0.834, 0.890] | 0.777 | 0.945 | 6/37   |
+| CAID2 Disorder-PDB | SPOT-Disorder2       | calibrated        |       0.414 |  0.792 |  0.964 |  0.878 | [0.850, 0.903] | 0.787 | 0.945 | 3/37   |
+| CAID2 Disorder-PDB | metapredict          | literal           |       0.5   |  0.768 |  0.96  |  0.864 | [0.838, 0.889] | 0.763 | 0.927 | 5/37   |
+| CAID2 Disorder-PDB | metapredict          | calibrated        |       0.503 |  0.767 |  0.961 |  0.864 | [0.837, 0.889] | 0.763 | 0.927 | 8/37   |
+| CAID2 Disorder-NOX | AlphaFold-disorder * | literal           |       0.5   |  0.575 |  0.712 |  0.644 | [0.604, 0.685] | 0.265 | 0.715 | 25/37  |
+| CAID2 Disorder-NOX | AlphaFold-disorder * | calibrated        |       0.206 |  0.839 |  0.566 |  0.703 | [0.667, 0.737] | 0.362 | 0.715 | 16/37  |
+| CAID2 Disorder-NOX | AlphaFold-rsa        | literal           |       0.5   |  0.864 |  0.553 |  0.709 | [0.670, 0.745] | 0.374 | 0.736 | 6/37   |
+| CAID2 Disorder-NOX | AlphaFold-rsa        | calibrated        |       0.576 |  0.804 |  0.622 |  0.713 | [0.672, 0.750] | 0.379 | 0.736 | 9/37   |
+| CAID2 Disorder-NOX | AIUPred              | literal           |       0.5   |  0.853 |  0.528 |  0.69  | [0.654, 0.726] | 0.343 | 0.752 | 13/37  |
+| CAID2 Disorder-NOX | AIUPred              | calibrated        |       0.662 |  0.758 |  0.646 |  0.702 | [0.663, 0.739] | 0.361 | 0.752 | 17/37  |
+| CAID2 Disorder-NOX | IUPred3              | literal           |       0.5   |  0.71  |  0.676 |  0.693 | [0.657, 0.726] | 0.346 | 0.743 | 11/37  |
+| CAID2 Disorder-NOX | IUPred3              | calibrated        |       0.511 |  0.695 |  0.689 |  0.692 | [0.656, 0.726] | 0.346 | 0.743 | 21/37  |
+| CAID2 Disorder-NOX | ESpritz-D            | literal           |       0.5   |  0.351 |  0.905 |  0.628 | [0.582, 0.673] | 0.307 | 0.778 | 27/37  |
+| CAID2 Disorder-NOX | ESpritz-D            | calibrated        |       0.251 |  0.845 |  0.569 |  0.707 | [0.669, 0.747] | 0.369 | 0.778 | 14/37  |
+| CAID2 Disorder-NOX | MobiDB-lite          | literal           |       0.5   |  0.523 |  0.78  |  0.652 | [0.619, 0.685] | 0.294 | 0.732 | 22/37  |
+| CAID2 Disorder-NOX | MobiDB-lite          | calibrated        |       0.25  |  0.728 |  0.647 |  0.687 | [0.653, 0.721] | 0.334 | 0.732 | 24/37  |
+| CAID2 Disorder-NOX | flDPnn               | literal           |       0.5   |  0.297 |  0.937 |  0.617 | [0.578, 0.660] | 0.313 | 0.78  | 31/37  |
+| CAID2 Disorder-NOX | flDPnn               | calibrated        |       0.119 |  0.831 |  0.58  |  0.706 | [0.672, 0.740] | 0.366 | 0.78  | 15/37  |
+| CAID2 Disorder-NOX | DISOPRED3-diso       | literal           |       0.5   |  0.7   |  0.651 |  0.676 | [0.637, 0.715] | 0.314 | 0.703 | 18/37  |
+| CAID2 Disorder-NOX | DISOPRED3-diso       | calibrated        |       0.32  |  0.776 |  0.587 |  0.681 | [0.644, 0.718] | 0.322 | 0.703 | 26/37  |
+| CAID2 Disorder-NOX | SETH-1               | literal           |       0.5   |  0.711 |  0.678 |  0.694 | [0.658, 0.729] | 0.349 | 0.742 | 9/37   |
+| CAID2 Disorder-NOX | SETH-1               | calibrated        |       0.36  |  0.821 |  0.601 |  0.711 | [0.675, 0.744] | 0.375 | 0.742 | 11/37  |
+| CAID2 Disorder-NOX | VSL2                 | literal           |       0.5   |  0.858 |  0.485 |  0.671 | [0.639, 0.704] | 0.312 | 0.726 | 19/37  |
+| CAID2 Disorder-NOX | VSL2                 | calibrated        |       0.598 |  0.789 |  0.575 |  0.682 | [0.648, 0.718] | 0.324 | 0.726 | 25/37  |
+| CAID2 Disorder-NOX | SPOT-Disorder2       | literal           |       0.5   |  0.782 |  0.663 |  0.722 | [0.680, 0.760] | 0.397 | 0.76  | 3/37   |
+| CAID2 Disorder-NOX | SPOT-Disorder2       | calibrated        |       0.368 |  0.842 |  0.626 |  0.734 | [0.694, 0.771] | 0.415 | 0.76  | 1/37   |
+| CAID2 Disorder-NOX | metapredict          | literal           |       0.5   |  0.81  |  0.634 |  0.722 | [0.683, 0.760] | 0.395 | 0.749 | 4/37   |
+| CAID2 Disorder-NOX | metapredict          | calibrated        |       0.42  |  0.835 |  0.613 |  0.724 | [0.686, 0.760] | 0.398 | 0.749 | 4/37   |
+| CAID3 Disorder-PDB | AlphaFold-pLDDT *    | literal           |       0.5   |  0.551 |  0.987 |  0.769 | [0.742, 0.792] | 0.648 | 0.943 | 33/56  |
+| CAID3 Disorder-PDB | AlphaFold-pLDDT *    | calibrated        |       0.282 |  0.791 |  0.952 |  0.871 | [0.850, 0.891] | 0.766 | 0.943 | 11/56  |
+| CAID3 Disorder-PDB | AlphaFold-rsa        | literal           |       0.5   |  0.861 |  0.92  |  0.89  | [0.870, 0.908] | 0.773 | 0.95  | 1/56   |
+| CAID3 Disorder-PDB | AlphaFold-rsa        | calibrated        |       0.546 |  0.823 |  0.948 |  0.886 | [0.864, 0.904] | 0.786 | 0.95  | 2/56   |
+| CAID3 Disorder-PDB | AlphaFold3-pLDDT     | literal           |       0.5   |  0.509 |  0.987 |  0.748 | [0.720, 0.777] | 0.614 | 0.936 | 36/56  |
+| CAID3 Disorder-PDB | AlphaFold3-pLDDT     | calibrated        |       0.202 |  0.822 |  0.918 |  0.87  | [0.850, 0.887] | 0.74  | 0.936 | 12/56  |
+| CAID3 Disorder-PDB | AIUPred              | literal           |       0.5   |  0.814 |  0.804 |  0.809 | [0.787, 0.830] | 0.587 | 0.888 | 24/56  |
+| CAID3 Disorder-PDB | AIUPred              | calibrated        |       0.717 |  0.629 |  0.958 |  0.793 | [0.767, 0.817] | 0.651 | 0.888 | 40/56  |
+| CAID3 Disorder-PDB | IUPred3              | literal           |       0.5   |  0.62  |  0.936 |  0.778 | [0.752, 0.800] | 0.605 | 0.87  | 32/56  |
+| CAID3 Disorder-PDB | IUPred3              | calibrated        |       0.484 |  0.644 |  0.925 |  0.784 | [0.759, 0.808] | 0.606 | 0.87  | 45/56  |
+| CAID3 Disorder-PDB | ESpritz-D            | literal           |       0.5   |  0.36  |  0.974 |  0.667 | [0.633, 0.698] | 0.458 | 0.854 | 49/56  |
+| CAID3 Disorder-PDB | ESpritz-D            | calibrated        |       0.342 |  0.612 |  0.908 |  0.76  | [0.725, 0.792] | 0.553 | 0.854 | 51/56  |
+| CAID3 Disorder-PDB | MobiDB-lite          | literal           |       0.5   |  0.566 |  0.96  |  0.763 | [0.738, 0.785] | 0.606 | 0.857 | 35/56  |
+| CAID3 Disorder-PDB | MobiDB-lite          | calibrated        |       0.429 |  0.566 |  0.96  |  0.763 | [0.738, 0.785] | 0.606 | 0.857 | 49/56  |
+| CAID3 Disorder-PDB | flDPnn               | literal           |       0.5   |  0.336 |  0.984 |  0.66  | [0.633, 0.688] | 0.462 | 0.886 | 50/56  |
+| CAID3 Disorder-PDB | flDPnn               | calibrated        |       0.209 |  0.714 |  0.903 |  0.808 | [0.786, 0.830] | 0.63  | 0.886 | 36/56  |
+| CAID3 Disorder-PDB | DISOPRED3-diso       | literal           |       0.5   |  0.642 |  0.967 |  0.804 | [0.779, 0.827] | 0.677 | 0.914 | 26/56  |
+| CAID3 Disorder-PDB | DISOPRED3-diso       | calibrated        |       0.32  |  0.73  |  0.938 |  0.834 | [0.811, 0.856] | 0.697 | 0.914 | 27/56  |
+| CAID3 Disorder-PDB | SETH-1               | literal           |       0.5   |  0.697 |  0.966 |  0.831 | [0.811, 0.852] | 0.718 | 0.914 | 16/56  |
+| CAID3 Disorder-PDB | SETH-1               | calibrated        |       0.439 |  0.755 |  0.946 |  0.851 | [0.829, 0.870] | 0.73  | 0.914 | 18/56  |
+| CAID3 Disorder-PDB | VSL2                 | literal           |       0.5   |  0.827 |  0.778 |  0.802 | [0.784, 0.820] | 0.569 | 0.886 | 28/56  |
+| CAID3 Disorder-PDB | VSL2                 | calibrated        |       0.698 |  0.641 |  0.941 |  0.791 | [0.769, 0.811] | 0.631 | 0.886 | 42/56  |
+| CAID3 Disorder-PDB | SPOT-Disorder2       | literal           |       0.5   |  0.747 |  0.973 |  0.86  | [0.835, 0.883] | 0.768 | 0.947 | 10/56  |
+| CAID3 Disorder-PDB | SPOT-Disorder2       | calibrated        |       0.378 |  0.798 |  0.954 |  0.876 | [0.854, 0.896] | 0.776 | 0.947 | 7/56   |
+| CAID3 Disorder-PDB | Metapredict-v3       | literal           |       0.5   |  0.76  |  0.966 |  0.863 | [0.839, 0.884] | 0.765 | 0.934 | 9/56   |
+| CAID3 Disorder-PDB | Metapredict-v3       | calibrated        |       0.512 |  0.754 |  0.968 |  0.861 | [0.838, 0.883] | 0.765 | 0.934 | 14/56  |
+| CAID3 Disorder-PDB | PUNCH2               | literal           |       0.5   |  0.78  |  0.973 |  0.876 | [0.851, 0.899] | 0.793 | 0.957 | 6/56   |
+| CAID3 Disorder-PDB | PUNCH2               | calibrated        |       0.377 |  0.815 |  0.959 |  0.887 | [0.863, 0.908] | 0.796 | 0.957 | 1/56   |
+| CAID3 Disorder-PDB | DisorderUnetLM       | literal           |       0.5   |  0.636 |  0.959 |  0.797 | [0.764, 0.826] | 0.659 | 0.939 | 29/56  |
+| CAID3 Disorder-PDB | DisorderUnetLM       | calibrated        |       0.097 |  0.866 |  0.894 |  0.88  | [0.858, 0.899] | 0.742 | 0.939 | 4/56   |
+| CAID3 Disorder-NOX | AlphaFold-pLDDT *    | literal           |       0.5   |  0.588 |  0.835 |  0.712 | [0.681, 0.741] | 0.428 | 0.833 | 37/56  |
+| CAID3 Disorder-NOX | AlphaFold-pLDDT *    | calibrated        |       0.272 |  0.832 |  0.745 |  0.789 | [0.761, 0.815] | 0.536 | 0.833 | 17/56  |
+| CAID3 Disorder-NOX | AlphaFold-rsa        | literal           |       0.5   |  0.919 |  0.679 |  0.799 | [0.771, 0.828] | 0.55  | 0.848 | 4/56   |
+| CAID3 Disorder-NOX | AlphaFold-rsa        | calibrated        |       0.583 |  0.847 |  0.759 |  0.803 | [0.777, 0.830] | 0.564 | 0.848 | 8/56   |
+| CAID3 Disorder-NOX | AlphaFold3-pLDDT     | literal           |       0.5   |  0.546 |  0.843 |  0.695 | [0.659, 0.729] | 0.401 | 0.827 | 40/56  |
+| CAID3 Disorder-NOX | AlphaFold3-pLDDT     | calibrated        |       0.202 |  0.85  |  0.724 |  0.787 | [0.762, 0.814] | 0.531 | 0.827 | 18/56  |
+| CAID3 Disorder-NOX | AIUPred              | literal           |       0.5   |  0.853 |  0.629 |  0.741 | [0.711, 0.770] | 0.444 | 0.816 | 25/56  |
+| CAID3 Disorder-NOX | AIUPred              | calibrated        |       0.691 |  0.717 |  0.795 |  0.756 | [0.724, 0.787] | 0.491 | 0.816 | 34/56  |
+| CAID3 Disorder-NOX | IUPred3              | literal           |       0.5   |  0.671 |  0.795 |  0.733 | [0.699, 0.764] | 0.45  | 0.794 | 29/56  |
+| CAID3 Disorder-NOX | IUPred3              | calibrated        |       0.478 |  0.704 |  0.771 |  0.738 | [0.704, 0.769] | 0.452 | 0.794 | 41/56  |
+| CAID3 Disorder-NOX | ESpritz-D            | literal           |       0.5   |  0.409 |  0.906 |  0.657 | [0.619, 0.693] | 0.369 | 0.801 | 47/56  |
+| CAID3 Disorder-NOX | ESpritz-D            | calibrated        |       0.341 |  0.681 |  0.777 |  0.729 | [0.691, 0.764] | 0.438 | 0.801 | 47/56  |
+| CAID3 Disorder-NOX | MobiDB-lite          | literal           |       0.5   |  0.606 |  0.835 |  0.721 | [0.686, 0.750] | 0.443 | 0.793 | 32/56  |
+| CAID3 Disorder-NOX | MobiDB-lite          | calibrated        |       0.286 |  0.692 |  0.783 |  0.738 | [0.704, 0.766] | 0.455 | 0.793 | 40/56  |
+| CAID3 Disorder-NOX | flDPnn               | literal           |       0.5   |  0.372 |  0.933 |  0.653 | [0.621, 0.685] | 0.384 | 0.834 | 48/56  |
+| CAID3 Disorder-NOX | flDPnn               | calibrated        |       0.21  |  0.752 |  0.779 |  0.766 | [0.734, 0.795] | 0.503 | 0.834 | 26/56  |
+| CAID3 Disorder-NOX | DISOPRED3-diso       | literal           |       0.5   |  0.69  |  0.788 |  0.739 | [0.705, 0.770] | 0.458 | 0.802 | 26/56  |
+| CAID3 Disorder-NOX | DISOPRED3-diso       | calibrated        |       0.37  |  0.751 |  0.752 |  0.751 | [0.719, 0.781] | 0.472 | 0.802 | 36/56  |
+| CAID3 Disorder-NOX | SETH-1               | literal           |       0.5   |  0.744 |  0.806 |  0.775 | [0.745, 0.802] | 0.527 | 0.831 | 12/56  |
+| CAID3 Disorder-NOX | SETH-1               | calibrated        |       0.396 |  0.831 |  0.751 |  0.791 | [0.761, 0.818] | 0.541 | 0.831 | 15/56  |
+| CAID3 Disorder-NOX | VSL2                 | literal           |       0.5   |  0.853 |  0.597 |  0.725 | [0.697, 0.754] | 0.415 | 0.795 | 31/56  |
+| CAID3 Disorder-NOX | VSL2                 | calibrated        |       0.613 |  0.765 |  0.704 |  0.735 | [0.703, 0.764] | 0.435 | 0.795 | 43/56  |
+| CAID3 Disorder-NOX | SPOT-Disorder2       | literal           |       0.5   |  0.804 |  0.783 |  0.794 | [0.763, 0.822] | 0.552 | 0.853 | 7/56   |
+| CAID3 Disorder-NOX | SPOT-Disorder2       | calibrated        |       0.442 |  0.827 |  0.767 |  0.797 | [0.767, 0.825] | 0.554 | 0.853 | 12/56  |
+| CAID3 Disorder-NOX | Metapredict-v3       | literal           |       0.5   |  0.835 |  0.783 |  0.809 | [0.777, 0.836] | 0.579 | 0.849 | 1/56   |
+| CAID3 Disorder-NOX | Metapredict-v3       | calibrated        |       0.536 |  0.822 |  0.794 |  0.808 | [0.776, 0.836] | 0.581 | 0.849 | 4/56   |
+| CAID3 Disorder-NOX | PUNCH2               | literal           |       0.5   |  0.85  |  0.767 |  0.808 | [0.777, 0.838] | 0.574 | 0.853 | 2/56   |
+| CAID3 Disorder-NOX | PUNCH2               | calibrated        |       0.476 |  0.856 |  0.762 |  0.809 | [0.778, 0.839] | 0.575 | 0.853 | 2/56   |
+| CAID3 Disorder-NOX | DisorderUnetLM       | literal           |       0.5   |  0.662 |  0.885 |  0.774 | [0.740, 0.807] | 0.56  | 0.887 | 13/56  |
+| CAID3 Disorder-NOX | DisorderUnetLM       | calibrated        |       0.108 |  0.9   |  0.738 |  0.819 | [0.794, 0.843] | 0.589 | 0.887 | 1/56   |
